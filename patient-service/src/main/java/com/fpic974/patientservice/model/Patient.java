@@ -16,22 +16,23 @@ import static jakarta.persistence.GenerationType.*;
 @NoArgsConstructor
 @Getter
 @Setter
+@Builder
 public class Patient {
 
     @Id
     @GeneratedValue(strategy = IDENTITY)
     private Integer id;
 
-    @NotEmpty
+    @NotEmpty(message = "lastName should not be empty")
     private String lastName;
 
-    @NotEmpty
+    @NotEmpty(message = "firstName should not be empty")
     private String firstName;
 
-    @NotNull
+    @NotNull(message = "birthDate should not be null")
     private LocalDate birthDate;
 
-    @NotNull
+    @NotNull(message = "gender should not be null")
     private Character gender;
 
     private String address;
