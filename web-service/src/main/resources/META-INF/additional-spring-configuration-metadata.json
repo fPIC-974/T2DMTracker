@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "org.fpic974.webservice.patientApiUrl",
+      "type": "java.lang.String",
+      "description": "Description for org.fpic974.webservice.patientApiUrl."
+    }
+  ] }
