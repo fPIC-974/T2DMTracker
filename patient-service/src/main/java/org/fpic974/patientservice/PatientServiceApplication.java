@@ -1,4 +1,4 @@
-package com.fpic974.patientservice;
+package org.fpic974.patientservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

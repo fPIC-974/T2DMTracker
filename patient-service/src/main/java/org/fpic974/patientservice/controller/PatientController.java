@@ -1,8 +1,8 @@
-package com.fpic974.patientservice.controller;
+package org.fpic974.patientservice.controller;
 
-import com.fpic974.patientservice.dto.PatientRequest;
-import com.fpic974.patientservice.dto.PatientResponse;
-import com.fpic974.patientservice.service.PatientService;
+import org.fpic974.patientservice.dto.PatientRequest;
+import org.fpic974.patientservice.dto.PatientResponse;
+import org.fpic974.patientservice.service.PatientService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

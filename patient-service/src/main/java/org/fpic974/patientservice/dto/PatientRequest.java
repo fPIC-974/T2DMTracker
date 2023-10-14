@@ -1,4 +1,4 @@
-package com.fpic974.patientservice.dto;
+package org.fpic974.patientservice.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

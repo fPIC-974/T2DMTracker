@@ -1,9 +1,9 @@
-package com.fpic974.patientservice.service;
+package org.fpic974.patientservice.service;
 
-import com.fpic974.patientservice.dto.PatientRequest;
-import com.fpic974.patientservice.dto.PatientResponse;
-import com.fpic974.patientservice.model.Patient;
-import com.fpic974.patientservice.repository.PatientRepository;
+import org.fpic974.patientservice.dto.PatientRequest;
+import org.fpic974.patientservice.dto.PatientResponse;
+import org.fpic974.patientservice.model.Patient;
+import org.fpic974.patientservice.repository.PatientRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

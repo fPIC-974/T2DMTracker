@@ -1,4 +1,4 @@
-package com.fpic974.patientservice.model;
+package org.fpic974.patientservice.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
