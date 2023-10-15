@@ -1,0 +1,13 @@
+{
+  "properties": [
+    {
+      "name": "com.t2dmtracker.riskservice.patientApiUrl",
+      "type": "java.lang.String",
+      "description": "Description for com.t2dmtracker.riskservice.patientApiUrl."
+    },
+    {
+      "name": "com.t2dmtracker.riskservice.noteApiUrl",
+      "type": "java.lang.String",
+      "description": "Description for com.t2dmtracker.riskservice.noteApiUrl."
+    }
+  ] }

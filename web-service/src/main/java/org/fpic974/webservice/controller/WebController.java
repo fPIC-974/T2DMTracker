@@ -9,6 +9,7 @@ import org.fpic974.webservice.dto.PatientRequest;
 import org.fpic974.webservice.dto.PatientResponse;
 import org.fpic974.webservice.service.NoteService;
 import org.fpic974.webservice.service.PatientService;
+import org.fpic974.webservice.service.RiskService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -24,6 +25,8 @@ public class WebController {
 
     private final PatientService patientService;
     private final NoteService noteService;
+
+    private final RiskService riskService;
 
     @GetMapping
     public String home(Model model) {
@@ -46,14 +49,15 @@ public class WebController {
 
     @GetMapping("/details")
     public String getPatientDetails(@RequestParam Integer id, NoteRequest noteRequest, Model model) {
+        log.debug("Controller Call : GET -- /details?id=" + id);
         PatientResponse patient = patientService.getPatientById(id);
         List<NoteResponse> notes = noteService.getNotesByPatientId(id);
-//        String riskAssessment = riskAssessmentService.getRiskAssessmentByPatientId(id);
+        String risk = riskService.getRiskAssessmentByPatientId(id);
 
         model.addAttribute("patient", patient);
         model.addAttribute("notes", notes);
         model.addAttribute("note", noteRequest);
-//        model.addAttribute("risk", riskAssessment);
+        model.addAttribute("risk", risk);
 
         return "patient/details";
     }
@@ -123,6 +127,7 @@ public class WebController {
         log.debug("POST -- /patient/validateNote - " + noteRequest);
 
         noteService.createNote(noteRequest);
+        model.addAttribute("risk", riskService.getRiskAssessmentByPatientId(noteRequest.getPatientId()));
 
         return "redirect:http://localhost:8080/web/patient/details?id=" + noteRequest.getPatientId();
     }

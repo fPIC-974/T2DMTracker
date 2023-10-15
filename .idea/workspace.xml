@@ -4,14 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5917bb7-e171-4812-970d-cf82c6d93bc4" name="Changes" comment="- added url information in web-service&#10;- added route setup in gateway-service">
-      <change afterPath="$PROJECT_DIR$/risk-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/RiskServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/risk-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/risk-service/src/test/java/org/fpic974/riskservice/RiskServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="b5917bb7-e171-4812-970d-cf82c6d93bc4" name="Changes" comment="- added notes deletion when patient deleted">
+      <change afterPath="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/config/CustomProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/config/WebClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/controller/RiskController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/dto/NoteRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/dto/NoteResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/dto/PatientRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/dto/PatientResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/model/RiskAssessment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/service/RiskService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/risk-service/src/main/resources/META-INF/additional-spring-configuration-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/service/RiskService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/risk-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/risk-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/risk-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/risk-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/config/CustomProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/config/CustomProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/controller/WebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/controller/WebController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/META-INF/additional-spring-configuration-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/META-INF/additional-spring-configuration-metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/patient/details.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/patient/details.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +42,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="spring2_note-service" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -58,7 +71,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "/Users/fpicard/OpenClassrooms/Project-9/T2DMTracker/risk-service",
+    "last_opened_file_path": "/Users/fpicard/OpenClassrooms/Project-9/T2DMTracker/risk-service/src/main/java/org/fpic974/riskservice/dto",
     "nodejs_package_manager_path": "npm",
     "spring.configuration.checksum": "bc73279196b66f9a6949eefff4c2db7f"
   },
@@ -71,11 +84,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/dto" />
       <recent name="$PROJECT_DIR$/risk-service" />
       <recent name="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/dto" />
       <recent name="$PROJECT_DIR$/note-service" />
       <recent name="$PROJECT_DIR$/docker/mongo-t2dm/doc/db" />
-      <recent name="$PROJECT_DIR$/docker/mongo-t2dm" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web-service/src/main/resources/templates" />
@@ -83,6 +96,7 @@
       <recent name="$PROJECT_DIR$/docker/mysql-t2dm" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.fpic974.riskservice.config" />
       <recent name="org.fpic974.webservice.security" />
       <recent name="org.fpic974.webservice.dto" />
     </key>
@@ -154,11 +168,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Spring Boot.NoteServiceApplication" />
+      <item itemvalue="Spring Boot.RiskServiceApplication" />
+      <item itemvalue="Spring Boot.WebServiceApplication" />
+      <item itemvalue="Spring Boot.GatewayServiceApplication" />
+      <item itemvalue="Spring Boot.PatientServiceApplication" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.GatewayServiceApplication" />
         <item itemvalue="Spring Boot.WebServiceApplication" />
         <item itemvalue="Spring Boot.PatientServiceApplication" />
+        <item itemvalue="Spring Boot.GatewayServiceApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -229,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697374619115</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="- added notes deletion when patient deleted">
+      <created>1697379280996</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1697379280996</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,6 +295,7 @@
     <MESSAGE value="- Added Dockerfile for mongo-t2dm image creation&#10;- Updated README.md with usage" />
     <MESSAGE value="- Created note-service with base components (GET/POST)" />
     <MESSAGE value="- added url information in web-service&#10;- added route setup in gateway-service" />
-    <option name="LAST_COMMIT_MESSAGE" value="- added url information in web-service&#10;- added route setup in gateway-service" />
+    <MESSAGE value="- added notes deletion when patient deleted" />
+    <option name="LAST_COMMIT_MESSAGE" value="- added notes deletion when patient deleted" />
   </component>
 </project>
