@@ -1,0 +1,47 @@
+services:
+  mysql-t2dm:
+    hostname: mysql-t2dm
+    image: mysql-t2dm:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+  mongo-t2dm:
+    hostname: mongo-t2dm
+    image: mongo-t2dm:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+      MONGO_INITDB_DATABASE: T2DM
+  patient-service:
+    hostname: patient-service
+    image: patient-service:latest
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-t2dm/T2DM
+    restart: on-failure
+    depends_on:
+      - mysql-t2dm
+  note-service:
+    hostname: note-service
+    image: note-service:latest
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    restart: on-failure
+    depends_on:
+      - mongo-t2dm
+  risk-service:
+    hostname: risk-service
+    image: risk-service:latest
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+  web-service:
+    hostname: web-service
+    image: web-service:latest
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+  gateway-service:
+    hostname: gateway-service
+    image: gateway-service:latest
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    ports:
+      - "8080:8080"

@@ -4,27 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5917bb7-e171-4812-970d-cf82c6d93bc4" name="Changes" comment="- added notes deletion when patient deleted">
-      <change afterPath="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/config/CustomProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/config/WebClientConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/controller/RiskController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/dto/NoteRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/dto/NoteResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/dto/PatientRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/dto/PatientResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/model/RiskAssessment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/service/RiskService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/risk-service/src/main/resources/META-INF/additional-spring-configuration-metadata.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/service/RiskService.java" afterDir="false" />
+    <list default="true" id="b5917bb7-e171-4812-970d-cf82c6d93bc4" name="Changes" comment="- risk-service&#10;- updated routes">
+      <change afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application-docker.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note-service/src/main/resources/application-docker.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patient-service/src/main/resources/application-docker.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/risk-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/risk-service/src/main/resources/application-docker.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-service/src/main/resources/application-docker.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/risk-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/risk-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/risk-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/risk-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/config/CustomProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/config/CustomProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/controller/WebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/controller/WebController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/META-INF/additional-spring-configuration-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/META-INF/additional-spring-configuration-metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/patient/details.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/patient/details.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,9 +65,13 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "/Users/fpicard/OpenClassrooms/Project-9/T2DMTracker/risk-service/src/main/java/org/fpic974/riskservice/dto",
+    "last_opened_file_path": "/Users/fpicard/OpenClassrooms/Project-9/T2DMTracker/gateway-service/src/main/resources",
     "nodejs_package_manager_path": "npm",
-    "spring.configuration.checksum": "bc73279196b66f9a6949eefff4c2db7f"
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "spring.configuration.checksum": "ef7bdc975235682336333f6caf110f8d"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -84,11 +82,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/dto" />
-      <recent name="$PROJECT_DIR$/risk-service" />
-      <recent name="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/dto" />
-      <recent name="$PROJECT_DIR$/note-service" />
-      <recent name="$PROJECT_DIR$/docker/mongo-t2dm/doc/db" />
+      <recent name="$PROJECT_DIR$/gateway-service/src/main/resources" />
+      <recent name="$PROJECT_DIR$/gateway-service/src/main" />
+      <recent name="$PROJECT_DIR$/gateway-service" />
+      <recent name="$PROJECT_DIR$/web-service/src/main/resources" />
+      <recent name="$PROJECT_DIR$/web-service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web-service/src/main/resources/templates" />
@@ -113,20 +111,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.WebServiceApplication">
-    <configuration name="GatewayServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="gateway-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="org.fpic974.gatewayservice.GatewayServiceApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.fpic974.gatewayservice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Docker.docker-compose.yaml: Compose Deployment">
     <configuration name="NoteServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="note-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.fpic974.noteservice.NoteServiceApplication" />
@@ -168,18 +153,56 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="docker-compose.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yaml.mysql-t2dm: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="mysql-t2dm" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yaml.patient-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="patient-service" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Docker.docker-compose.yaml.mysql-t2dm: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yaml.patient-service: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
       <item itemvalue="Spring Boot.NoteServiceApplication" />
       <item itemvalue="Spring Boot.RiskServiceApplication" />
       <item itemvalue="Spring Boot.WebServiceApplication" />
-      <item itemvalue="Spring Boot.GatewayServiceApplication" />
       <item itemvalue="Spring Boot.PatientServiceApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yaml.patient-service: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yaml.mysql-t2dm: Compose Deployment" />
         <item itemvalue="Spring Boot.WebServiceApplication" />
         <item itemvalue="Spring Boot.PatientServiceApplication" />
-        <item itemvalue="Spring Boot.GatewayServiceApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -200,6 +223,7 @@
       <workItem from="1697330008131" duration="231000" />
       <workItem from="1697330301023" duration="1288000" />
       <workItem from="1697364536087" duration="555000" />
+      <workItem from="1697400387563" duration="2696000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Setup&#10;patient-service base implementation">
       <created>1697300989287</created>
@@ -297,5 +321,9 @@
     <MESSAGE value="- added url information in web-service&#10;- added route setup in gateway-service" />
     <MESSAGE value="- added notes deletion when patient deleted" />
     <option name="LAST_COMMIT_MESSAGE" value="- added notes deletion when patient deleted" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
