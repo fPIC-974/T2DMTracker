@@ -31,11 +31,11 @@ public class NoteService {
                         .build()).toList();
     }
 
-    public NoteResponse createNoteByPatientId(String id, NoteRequest noteRequest) {
-        log.debug("Calling Service : createNoteByPatientId({}, {}", id, noteRequest);
+    public NoteResponse createNote(NoteRequest noteRequest) {
+        log.debug("Calling Service : createNote({})", noteRequest);
 
         Note note = Note.builder()
-                .patientId(id)
+                .patientId(noteRequest.getPatientId())
                 .note(noteRequest.getNote())
                 .build();
 
@@ -47,5 +47,13 @@ public class NoteService {
                 .patientId(note.getPatientId())
                 .note(note.getNote())
                 .build();
+    }
+
+    public void deleteNotesByPatientId(String id) {
+        log.debug("Service Call : deleteNotesByPatientId({})", id);
+
+        noteRepository.deleteByPatientId(id);
+
+        log.debug("Result : Notes for Patient Id {} deleted", id);
     }
 }

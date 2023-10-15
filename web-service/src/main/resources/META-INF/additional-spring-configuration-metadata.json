@@ -4,5 +4,10 @@
       "name": "org.fpic974.webservice.patientApiUrl",
       "type": "java.lang.String",
       "description": "Description for org.fpic974.webservice.patientApiUrl."
+    },
+    {
+      "name": "org.fpic974.webservice.noteApiUrl",
+      "type": "java.lang.String",
+      "description": "Description for org.fpic974.webservice.noteApiUrl."
     }
   ] }

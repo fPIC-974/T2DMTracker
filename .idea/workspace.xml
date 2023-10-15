@@ -4,9 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5917bb7-e171-4812-970d-cf82c6d93bc4" name="Changes" comment="- Created note-service with base components (GET/POST)">
-      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/application.properties" afterDir="false" />
+    <list default="true" id="b5917bb7-e171-4812-970d-cf82c6d93bc4" name="Changes" comment="- added url information in web-service&#10;- added route setup in gateway-service">
+      <change afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/dto/NoteRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/dto/NoteResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/service/NoteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note-service/src/main/java/org/fpic974/noteservice/controller/NoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/note-service/src/main/java/org/fpic974/noteservice/controller/NoteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note-service/src/main/java/org/fpic974/noteservice/repository/NoteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/note-service/src/main/java/org/fpic974/noteservice/repository/NoteRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note-service/src/main/java/org/fpic974/noteservice/service/NoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/note-service/src/main/java/org/fpic974/noteservice/service/NoteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/config/CustomProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/config/CustomProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/controller/WebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/controller/WebController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/META-INF/additional-spring-configuration-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/META-INF/additional-spring-configuration-metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/patient/details.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/patient/details.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +62,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "/Users/fpicard/OpenClassrooms/Project-9/T2DMTracker/note-service",
+    "last_opened_file_path": "/Users/fpicard/OpenClassrooms/Project-9/T2DMTracker/web-service/src/main/java/org/fpic974/webservice/dto",
     "nodejs_package_manager_path": "npm",
     "spring.configuration.checksum": "bc73279196b66f9a6949eefff4c2db7f"
   },
@@ -66,11 +75,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/dto" />
       <recent name="$PROJECT_DIR$/note-service" />
       <recent name="$PROJECT_DIR$/docker/mongo-t2dm/doc/db" />
       <recent name="$PROJECT_DIR$/docker/mongo-t2dm" />
       <recent name="$PROJECT_DIR$/patient-service/src/main/java/org/fpic974/patientservice" />
-      <recent name="$PROJECT_DIR$/web-service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web-service/src/main/resources/templates" />
@@ -144,9 +153,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.GatewayServiceApplication" />
         <item itemvalue="Spring Boot.WebServiceApplication" />
         <item itemvalue="Spring Boot.PatientServiceApplication" />
-        <item itemvalue="Spring Boot.GatewayServiceApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -210,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697374427747</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="- added url information in web-service&#10;- added route setup in gateway-service">
+      <created>1697374619115</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1697374619115</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,7 +243,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="main" />
+                        <option value="spring2_note-service" />
                       </list>
                     </value>
                   </entry>
@@ -247,6 +263,7 @@
     <MESSAGE value="Created web-service with thymeleaf templates&#10;gateway-service :&#10;- created route for web-service" />
     <MESSAGE value="- Added Dockerfile for mongo-t2dm image creation&#10;- Updated README.md with usage" />
     <MESSAGE value="- Created note-service with base components (GET/POST)" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Created note-service with base components (GET/POST)" />
+    <MESSAGE value="- added url information in web-service&#10;- added route setup in gateway-service" />
+    <option name="LAST_COMMIT_MESSAGE" value="- added url information in web-service&#10;- added route setup in gateway-service" />
   </component>
 </project>

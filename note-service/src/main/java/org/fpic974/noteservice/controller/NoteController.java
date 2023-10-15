@@ -24,7 +24,13 @@ public class NoteController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public NoteResponse createNoteByPatientId(@RequestParam String id, @RequestBody NoteRequest noteRequest) {
-        return noteService.createNoteByPatientId(id, noteRequest);
+    public NoteResponse createNote(@RequestBody NoteRequest noteRequest) {
+        return noteService.createNote(noteRequest);
+    }
+
+    @DeleteMapping
+    @ResponseStatus(HttpStatus.OK)
+    public void deleteNotesByPatientId(@RequestParam String id) {
+        noteService.deleteNotesByPatientId(id);
     }
 }

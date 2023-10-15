@@ -3,8 +3,11 @@ package org.fpic974.webservice.controller;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.fpic974.webservice.dto.NoteRequest;
+import org.fpic974.webservice.dto.NoteResponse;
 import org.fpic974.webservice.dto.PatientRequest;
 import org.fpic974.webservice.dto.PatientResponse;
+import org.fpic974.webservice.service.NoteService;
 import org.fpic974.webservice.service.PatientService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,6 +23,7 @@ import java.util.List;
 public class WebController {
 
     private final PatientService patientService;
+    private final NoteService noteService;
 
     @GetMapping
     public String home(Model model) {
@@ -41,14 +45,14 @@ public class WebController {
     }
 
     @GetMapping("/details")
-    public String getPatientDetails(@RequestParam Integer id, Model model) {
+    public String getPatientDetails(@RequestParam Integer id, NoteRequest noteRequest, Model model) {
         PatientResponse patient = patientService.getPatientById(id);
-//        List<Note> notes = noteService.getNotesByPatient(id);
+        List<NoteResponse> notes = noteService.getNotesByPatientId(id);
 //        String riskAssessment = riskAssessmentService.getRiskAssessmentByPatientId(id);
 
         model.addAttribute("patient", patient);
-//        model.addAttribute("notes", notes);
-//        model.addAttribute("note", note);
+        model.addAttribute("notes", notes);
+        model.addAttribute("note", noteRequest);
 //        model.addAttribute("risk", riskAssessment);
 
         return "patient/details";
@@ -81,6 +85,7 @@ public class WebController {
     public String deletePatient(@RequestParam Integer id, Model model) {
 
         patientService.deletePatientById(id);
+        noteService.deleteNotesByPatientId(id);
 
         model.addAttribute("patients", patientService.getAllPatients());
 
@@ -111,5 +116,14 @@ public class WebController {
         model.addAttribute("patients", patientService.getAllPatients());
 
         return "redirect:http://localhost:8080/web/patient/list";
+    }
+
+    @PostMapping("/validateNote")
+    public String addNote(@Valid NoteRequest noteRequest, BindingResult result, Model model) {
+        log.debug("POST -- /patient/validateNote - " + noteRequest);
+
+        noteService.createNote(noteRequest);
+
+        return "redirect:http://localhost:8080/web/patient/details?id=" + noteRequest.getPatientId();
     }
 }
