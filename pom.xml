@@ -20,6 +20,7 @@
         <module>patient-service</module>
         <module>gateway-service</module>
         <module>web-service</module>
+        <module>note-service</module>
     </modules>
 
     <properties>

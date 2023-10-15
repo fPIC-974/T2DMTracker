@@ -1,3 +1,14 @@
+db.createUser({
+    user: 'root',
+    pwd: 'root',
+    roles: [
+        {
+            role: 'readWrite',
+            db: 'T2DM',
+        },
+    ],
+});
+
 db.createCollection('notes', { capped: false });
 
 db.notes.insert([
