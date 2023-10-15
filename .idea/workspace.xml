@@ -4,22 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5917bb7-e171-4812-970d-cf82c6d93bc4" name="Changes" comment="- Added Dockerfile for mongo-t2dm image creation&#10;- Updated README.md with usage">
-      <change afterPath="$PROJECT_DIR$/note-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/note-service/src/main/java/org/fpic974/noteservice/NoteServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/note-service/src/main/java/org/fpic974/noteservice/controller/NoteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/note-service/src/main/java/org/fpic974/noteservice/dto/NoteRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/note-service/src/main/java/org/fpic974/noteservice/dto/NoteResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/note-service/src/main/java/org/fpic974/noteservice/model/Note.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/note-service/src/main/java/org/fpic974/noteservice/repository/NoteRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/note-service/src/main/java/org/fpic974/noteservice/service/NoteService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/note-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/note-service/src/test/java/org/fpic974/noteservice/NoteServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/mongo-t2dm/doc/db/mongo_import.js" beforeDir="false" afterPath="$PROJECT_DIR$/docker/mongo-t2dm/doc/db/mongo_import.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="b5917bb7-e171-4812-970d-cf82c6d93bc4" name="Changes" comment="- Created note-service with base components (GET/POST)">
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697370471867</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="- Created note-service with base components (GET/POST)">
+      <created>1697374427747</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1697374427747</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,6 +246,7 @@
     <MESSAGE value="gateway-service :&#10;- created route for patient-service" />
     <MESSAGE value="Created web-service with thymeleaf templates&#10;gateway-service :&#10;- created route for web-service" />
     <MESSAGE value="- Added Dockerfile for mongo-t2dm image creation&#10;- Updated README.md with usage" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Added Dockerfile for mongo-t2dm image creation&#10;- Updated README.md with usage" />
+    <MESSAGE value="- Created note-service with base components (GET/POST)" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Created note-service with base components (GET/POST)" />
   </component>
 </project>
