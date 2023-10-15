@@ -13,10 +13,11 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 @Slf4j
-public class PatientService {
+public class PatientService implements IPatientService {
 
     private final PatientRepository patientRepository;
 
+    @Override
     public List<PatientResponse> getAllPatients() {
         log.debug("Service Call : getAllPatients()");
         List<Patient> patients = patientRepository.findAll();
@@ -35,6 +36,7 @@ public class PatientService {
                         .build()).toList();
     }
 
+    @Override
     public PatientResponse getPatientById(Integer id) {
         log.debug("Service Call : getPatientById({})", id);
 
@@ -54,6 +56,7 @@ public class PatientService {
                 .build();
     }
 
+    @Override
     public PatientResponse createPatient(PatientRequest patientRequest) {
         log.debug("Service Call : createPatient({})", patientRequest);
 
@@ -81,6 +84,7 @@ public class PatientService {
                 .build();
     }
 
+    @Override
     public void deletePatientById(Integer id) {
         log.debug("Service Call : deletePatientById({})", id);
 
@@ -89,6 +93,7 @@ public class PatientService {
         log.debug("Result : Patient with id {} deleted", id);
     }
 
+    @Override
     public PatientResponse updatePatientById(Integer id, PatientRequest patientRequest) {
         log.debug("Service Call : updatePatientById({}, {})", id, patientRequest);
 

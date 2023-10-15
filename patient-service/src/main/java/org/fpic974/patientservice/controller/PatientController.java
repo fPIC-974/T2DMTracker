@@ -2,6 +2,7 @@ package org.fpic974.patientservice.controller;
 
 import org.fpic974.patientservice.dto.PatientRequest;
 import org.fpic974.patientservice.dto.PatientResponse;
+import org.fpic974.patientservice.service.IPatientService;
 import org.fpic974.patientservice.service.PatientService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -15,7 +16,7 @@ import java.util.List;
 @RequestMapping("/api/patient")
 public class PatientController {
 
-    private final PatientService patientService;
+    private final IPatientService patientService;
 
     @GetMapping("/list")
     @ResponseStatus(HttpStatus.OK)

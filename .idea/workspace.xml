@@ -4,21 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5917bb7-e171-4812-970d-cf82c6d93bc4" name="Changes" comment="- risk-service&#10;- updated routes">
-      <change afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application-docker.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/note-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/note-service/src/main/resources/application-docker.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patient-service/src/main/resources/application-docker.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/risk-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/risk-service/src/main/resources/application-docker.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-service/src/main/resources/application-docker.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/application.properties" afterDir="false" />
+    <list default="true" id="b5917bb7-e171-4812-970d-cf82c6d93bc4" name="Changes" comment="- added notes deletion when patient deleted">
+      <change afterPath="$PROJECT_DIR$/patient-service/src/main/java/org/fpic974/patientservice/service/IPatientService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/config/CustomProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/config/WebClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/controller/RiskController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/dto/NoteRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/dto/NoteResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/dto/PatientRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/dto/PatientResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/model/RiskAssessment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/service/RiskService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/risk-service/src/main/resources/META-INF/additional-spring-configuration-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/service/RiskService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/org/fpic974/patientservice/controller/PatientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/org/fpic974/patientservice/controller/PatientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/org/fpic974/patientservice/dto/PatientRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/org/fpic974/patientservice/dto/PatientRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/org/fpic974/patientservice/service/PatientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/org/fpic974/patientservice/service/PatientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/risk-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/risk-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/risk-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/risk-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/config/CustomProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/config/CustomProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/controller/WebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/controller/WebController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/META-INF/additional-spring-configuration-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/META-INF/additional-spring-configuration-metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/patient/details.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/patient/details.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +38,7 @@
       <list>
         <option value="HTML File" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -70,7 +79,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "spring.configuration.checksum": "ef7bdc975235682336333f6caf110f8d"
   },
   "keyToStringList": {
@@ -320,7 +329,8 @@
     <MESSAGE value="- Created note-service with base components (GET/POST)" />
     <MESSAGE value="- added url information in web-service&#10;- added route setup in gateway-service" />
     <MESSAGE value="- added notes deletion when patient deleted" />
-    <option name="LAST_COMMIT_MESSAGE" value="- added notes deletion when patient deleted" />
+    <MESSAGE value="- Dockerfile for each module&#10;- docker-compose.yaml&#10;- created application-docker.properties for each module to properly run in container mode&#10;- Updated README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Dockerfile for each module&#10;- docker-compose.yaml&#10;- created application-docker.properties for each module to properly run in container mode&#10;- Updated README.md" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
