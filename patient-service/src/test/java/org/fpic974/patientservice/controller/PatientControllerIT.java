@@ -4,15 +4,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import jakarta.transaction.Transactional;
 import org.fpic974.patientservice.dto.PatientRequest;
-import org.junit.Before;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import org.springframework.web.context.WebApplicationContext;
 
 import java.time.LocalDate;
 
@@ -26,21 +23,8 @@ import static org.hamcrest.CoreMatchers.is;
 @SpringBootTest
 @AutoConfigureMockMvc
 class PatientControllerIT {
-
-    @Autowired
-    private WebApplicationContext context;
-
     @Autowired
     public MockMvc mockMvc;
-
-
-    @Before
-    public void setup() {
-        mockMvc = MockMvcBuilders
-                .webAppContextSetup(context)
-                .defaultRequest(get("/api/patient"))
-                .build();
-    }
 
     @Test
     public void shouldGetPatients() throws Exception {

@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5917bb7-e171-4812-970d-cf82c6d93bc4" name="Changes" comment="patient-service:&#10;- tests finalization">
-      <change afterPath="$PROJECT_DIR$/patient-service/src/test/java/org/fpic974/patientservice/controller/PatientControllerIT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patient-service/src/test/java/org/fpic974/patientservice/service/PatientServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note-service/src/test/java/org/fpic974/noteservice/controller/NoteControllerIT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note-service/src/test/java/org/fpic974/noteservice/service/NoteServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-service/src/test/java/org/fpic974/patientservice/PatientServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/test/java/org/fpic974/patientservice/PatientServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note-service/src/main/java/org/fpic974/noteservice/dto/NoteResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/note-service/src/main/java/org/fpic974/noteservice/dto/NoteResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note-service/src/test/java/org/fpic974/noteservice/NoteServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/note-service/src/test/java/org/fpic974/noteservice/NoteServiceApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,6 +95,8 @@
       <recent name="org.fpic974.patientservice.service" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.fpic974.noteservice.controller" />
+      <recent name="org.fpic974.noteservice.service" />
       <recent name="org.fpic974.patientservice.controller" />
       <recent name="org.fpic974.patientservice.service" />
     </key>
@@ -116,73 +118,74 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in patient-service">
-    <configuration name="All in patient-service" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="patient-service" />
+  <component name="RunManager" selected="JUnit.All in note-service">
+    <configuration name="All in note-service" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="note-service" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PatientControllerIT.shouldCreatePatient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="patient-service" />
+    <configuration name="NoteControllerIT.shouldCreateNote" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="note-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.fpic974.patientservice.controller.*" />
+          <option name="PATTERN" value="org.fpic974.noteservice.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.fpic974.patientservice.controller" />
-      <option name="MAIN_CLASS_NAME" value="org.fpic974.patientservice.controller.PatientControllerIT" />
-      <option name="METHOD_NAME" value="shouldCreatePatient" />
+      <option name="PACKAGE_NAME" value="org.fpic974.noteservice.controller" />
+      <option name="MAIN_CLASS_NAME" value="org.fpic974.noteservice.controller.NoteControllerIT" />
+      <option name="METHOD_NAME" value="shouldCreateNote" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PatientControllerIT.shouldDeletePatientById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="patient-service" />
+    <configuration name="NoteControllerIT.shouldDeleteNotesByPatientId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="note-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.fpic974.patientservice.controller.*" />
+          <option name="PATTERN" value="org.fpic974.noteservice.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.fpic974.patientservice.controller" />
-      <option name="MAIN_CLASS_NAME" value="org.fpic974.patientservice.controller.PatientControllerIT" />
-      <option name="METHOD_NAME" value="shouldDeletePatientById" />
+      <option name="PACKAGE_NAME" value="org.fpic974.noteservice.controller" />
+      <option name="MAIN_CLASS_NAME" value="org.fpic974.noteservice.controller.NoteControllerIT" />
+      <option name="METHOD_NAME" value="shouldDeleteNotesByPatientId" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PatientControllerIT.shouldUpdatePatientById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="patient-service" />
+    <configuration name="NoteControllerIT.shouldGetNotesByPatientId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="note-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.fpic974.patientservice.controller.*" />
+          <option name="PATTERN" value="org.fpic974.noteservice.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.fpic974.patientservice.controller" />
-      <option name="MAIN_CLASS_NAME" value="org.fpic974.patientservice.controller.PatientControllerIT" />
-      <option name="METHOD_NAME" value="shouldUpdatePatientById" />
+      <option name="PACKAGE_NAME" value="org.fpic974.noteservice.controller" />
+      <option name="MAIN_CLASS_NAME" value="org.fpic974.noteservice.controller.NoteControllerIT" />
+      <option name="METHOD_NAME" value="shouldGetNotesByPatientId" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="org.fpic974.patientservice.controller in patient-service" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="patient-service" />
+    <configuration name="NoteServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="note-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.fpic974.patientservice.controller.*" />
+          <option name="PATTERN" value="org.fpic974.noteservice.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.fpic974.patientservice.controller" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="PACKAGE_NAME" value="org.fpic974.noteservice.service" />
+      <option name="MAIN_CLASS_NAME" value="org.fpic974.noteservice.service.NoteServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -223,11 +226,11 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.All in patient-service" />
-      <item itemvalue="JUnit.PatientControllerIT.shouldCreatePatient" />
-      <item itemvalue="JUnit.PatientControllerIT.shouldDeletePatientById" />
-      <item itemvalue="JUnit.PatientControllerIT.shouldUpdatePatientById" />
-      <item itemvalue="JUnit.org.fpic974.patientservice.controller in patient-service" />
+      <item itemvalue="JUnit.All in note-service" />
+      <item itemvalue="JUnit.NoteControllerIT.shouldCreateNote" />
+      <item itemvalue="JUnit.NoteControllerIT.shouldDeleteNotesByPatientId" />
+      <item itemvalue="JUnit.NoteControllerIT.shouldGetNotesByPatientId" />
+      <item itemvalue="JUnit.NoteServiceTest" />
       <item itemvalue="Spring Boot.GatewayServiceApplication" />
       <item itemvalue="Spring Boot.NoteServiceApplication" />
       <item itemvalue="Spring Boot.RiskServiceApplication" />
@@ -236,11 +239,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in patient-service" />
-        <item itemvalue="JUnit.PatientControllerIT.shouldUpdatePatientById" />
-        <item itemvalue="JUnit.org.fpic974.patientservice.controller in patient-service" />
-        <item itemvalue="JUnit.PatientControllerIT.shouldDeletePatientById" />
-        <item itemvalue="JUnit.PatientControllerIT.shouldCreatePatient" />
+        <item itemvalue="JUnit.All in note-service" />
+        <item itemvalue="JUnit.NoteControllerIT.shouldDeleteNotesByPatientId" />
+        <item itemvalue="JUnit.NoteControllerIT.shouldCreateNote" />
+        <item itemvalue="JUnit.NoteControllerIT.shouldGetNotesByPatientId" />
+        <item itemvalue="JUnit.NoteServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -326,7 +329,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697403951383</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="patient-service:&#10;- tests finalization">
+      <created>1697412750158</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1697412750158</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -376,6 +386,9 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/T2DMTracker$All_in_patient_service.ic" NAME="All in patient-service Coverage Results" MODIFIED="1697412440157" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/T2DMTracker$NoteServiceTest.ic" NAME="NoteServiceTest Coverage Results" MODIFIED="1697415101594" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.fpic974.noteservice.service.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/T2DMTracker$PatientServiceTest_shouldGetAllPatients.ic" NAME="PatientServiceTest.shouldGetAllPatients Coverage Results" MODIFIED="1697408302409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.fpic974.patientservice.service.*</FILTER>
     </SUITE>
