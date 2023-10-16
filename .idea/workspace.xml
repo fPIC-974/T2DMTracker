@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5917bb7-e171-4812-970d-cf82c6d93bc4" name="Changes" comment="web-service:&#10;- resolving error when trying to update multiple times with fields not validated">
+      <change afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/security/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/patient/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/patient/add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/controller/WebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/controller/WebController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/patient/details.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/patient/details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/patient/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/patient/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/patient/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/patient/update.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,9 +22,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Class" />
         <option value="Interface" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -60,7 +62,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "/Users/fpicard/OpenClassrooms/Project-9/T2DMTracker/gateway-service/src/main/resources",
+    "last_opened_file_path": "/Users/fpicard/OpenClassrooms/Project-9/T2DMTracker/web-service/src/main/java/org/fpic974/webservice",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
@@ -77,11 +79,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice" />
       <recent name="$PROJECT_DIR$/gateway-service/src/main/resources" />
       <recent name="$PROJECT_DIR$/gateway-service/src/main" />
       <recent name="$PROJECT_DIR$/gateway-service" />
       <recent name="$PROJECT_DIR$/web-service/src/main/resources" />
-      <recent name="$PROJECT_DIR$/web-service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web-service/src/main/resources/templates" />

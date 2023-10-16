@@ -15,6 +15,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
 import java.util.List;
 
 @Controller
@@ -29,17 +30,18 @@ public class WebController {
     private final RiskService riskService;
 
     @GetMapping
-    public String home(Model model) {
+    public String home(Model model, Principal principal) {
         log.info("Controller Call : GET /web/patient");
-        return getAllPatients(model);
+        return getAllPatients(model, principal);
     }
 
     @GetMapping("/list")
-    public String getAllPatients(Model model) {
+    public String getAllPatients(Model model, Principal principal) {
         log.debug("Controller Call : GET /web/patient/list");
 
         List<PatientResponse> patients = patientService.getAllPatients();
 
+        model.addAttribute("user", principal.getName());
         model.addAttribute("patients", patients);
 
         return "patient/list";
