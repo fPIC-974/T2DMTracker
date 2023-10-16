@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5917bb7-e171-4812-970d-cf82c6d93bc4" name="Changes" comment="patient-service:&#10;- tests finalization">
-      <change afterPath="$PROJECT_DIR$/note-service/src/test/java/org/fpic974/noteservice/controller/NoteControllerIT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/note-service/src/test/java/org/fpic974/noteservice/service/NoteServiceTest.java" afterDir="false" />
+    <list default="true" id="b5917bb7-e171-4812-970d-cf82c6d93bc4" name="Changes" comment="note-service:&#10;- tests finalization">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/note-service/src/main/java/org/fpic974/noteservice/dto/NoteResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/note-service/src/main/java/org/fpic974/noteservice/dto/NoteResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/note-service/src/test/java/org/fpic974/noteservice/NoteServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/note-service/src/test/java/org/fpic974/noteservice/NoteServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/controller/WebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/controller/WebController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/dto/NoteRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/dto/NoteRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/dto/PatientRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/dto/PatientRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/dto/PatientResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/dto/PatientResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/service/PatientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/service/PatientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/patient/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/patient/update.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -336,7 +340,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697412750158</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="note-service:&#10;- tests finalization">
+      <created>1697416773736</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1697416773736</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -378,7 +389,8 @@
     <MESSAGE value="- Dockerfile for each module&#10;- docker-compose.yaml&#10;- created application-docker.properties for each module to properly run in container mode&#10;- Updated README.md" />
     <MESSAGE value="patient-service:&#10;- Service Interface&#10;- Added validation to DTO" />
     <MESSAGE value="patient-service:&#10;- tests finalization" />
-    <option name="LAST_COMMIT_MESSAGE" value="patient-service:&#10;- tests finalization" />
+    <MESSAGE value="note-service:&#10;- tests finalization" />
+    <option name="LAST_COMMIT_MESSAGE" value="note-service:&#10;- tests finalization" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
@@ -398,5 +410,6 @@
     <SUITE FILE_PATH="coverage/T2DMTracker$PatientServiceTest.ic" NAME="PatientServiceTest Coverage Results" MODIFIED="1697408023029" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.fpic974.patientservice.service.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/T2DMTracker$All_in_note_service.ic" NAME="All in note-service Coverage Results" MODIFIED="1697416611096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

@@ -64,7 +64,7 @@ To build the image :
 
 To run the image :
 ```
-> docker run --detach --name=mysql-t2dm --publish 3306:3306 mysql-t2dm:latest
+docker run --detach --name=mysql-t2dm --publish 3306:3306 mysql-t2dm:latest
 ```
 
 > :warning: This command will run the image locally, and expose port 3306 to access the database.
@@ -84,7 +84,7 @@ To build the image :
 
 To run the image :
 ```
-> docker run --detach --name=mongo-t2dm --publish 27017:27017 mongo-t2dm:latest
+docker run --detach --name=mongo-t2dm --publish 27017:27017 mongo-t2dm:latest
 ```
 > :warning: This command will run the image locally, and expose port 27017 to access the database.
 
@@ -103,7 +103,7 @@ To build the module and the docker image :
 
 To run the image :
 ```
-> docker run --detach --name=patient-service --publish 9001:9001 patient-service:latest
+docker run --detach --name=patient-service --publish 9001:9001 patient-service:latest
 ```
 > :warning: This command will run the image locally, and expose port 9001 to access the application.
 
@@ -130,7 +130,7 @@ To build the module and the docker image :
 
 To run the image :
 ```
-> docker run --detach --name=note-service --publish 9002:9002 note-service:latest
+docker run --detach --name=note-service --publish 9002:9002 note-service:latest
 ```
 > :warning: This command will run the image locally, and expose port 9002 to access the application.
 
@@ -155,7 +155,7 @@ To build the module and the docker image :
 
 To run the image :
 ```
-> docker run --detach --name=risk-service --publish 9003:9003 risk-service:latest
+docker run --detach --name=risk-service --publish 9003:9003 risk-service:latest
 ```
 > :warning: This command will run the image locally, and expose port 9003 to access the application.
 
@@ -178,7 +178,7 @@ To build the module and the docker image :
 
 To run the image :
 ```
-> docker run --detach --name=web-service --publish 9000:9000 web-service:latest
+docker run --detach --name=web-service --publish 9000:9000 web-service:latest
 ```
 > :warning: This command will run the image locally, and expose port 9000 to access the application.
 
@@ -197,6 +197,6 @@ To build the module and the docker image :
 
 To run the image :
 ```
-> docker run --detach --name=gateway-service --publish 8080:8080 gateway-service:latest
+docker run --detach --name=gateway-service --publish 8080:8080 gateway-service:latest
 ```
 > :warning: This command will run the image locally, and expose port 8080 to access the application.

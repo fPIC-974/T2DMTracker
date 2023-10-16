@@ -1,5 +1,6 @@
 package org.fpic974.webservice.dto;
 
+import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -13,7 +14,9 @@ public class NoteRequest {
 
     private String id;
 
+    @NotEmpty
     private Integer patientId;
 
+    @NotEmpty
     private String note;
 }

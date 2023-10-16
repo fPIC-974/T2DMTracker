@@ -6,10 +6,7 @@ import org.fpic974.webservice.config.CustomProperties;
 import org.fpic974.webservice.dto.PatientRequest;
 import org.fpic974.webservice.dto.PatientResponse;
 import org.springframework.core.ParameterizedTypeReference;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
-import org.springframework.web.reactive.function.BodyInserter;
-import org.springframework.web.reactive.function.BodyInserters;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
@@ -24,6 +21,7 @@ public class PatientService {
     private final WebClient.Builder webClientBuilder;
 
     public List<PatientResponse> getAllPatients() {
+        log.debug("Service Call : getAllPatients()");
 
         return webClientBuilder.build().get()
                 .uri(customProperties.getPatientApiUrl() + "/list")
@@ -33,6 +31,8 @@ public class PatientService {
     }
 
     public PatientResponse getPatientById(Integer id) {
+        log.debug("Service Call : getPatientById({})", id);
+
         return webClientBuilder.build().get()
                 .uri(customProperties.getPatientApiUrl(), uriBuilder -> uriBuilder.queryParam("id", id).build())
                 .retrieve()
@@ -41,6 +41,8 @@ public class PatientService {
     }
 
     public PatientResponse createPatient(PatientRequest patientRequest) {
+        log.debug("Service Call : createPatient({})", patientRequest);
+
         return webClientBuilder.build().post()
                 .uri(customProperties.getPatientApiUrl())
                 .body(Mono.just(patientRequest), PatientRequest.class)
@@ -50,6 +52,8 @@ public class PatientService {
     }
 
     public void deletePatientById(Integer id) {
+        log.debug("Service Call : deletePatientById({})", id);
+
         webClientBuilder.build().delete()
                 .uri(customProperties.getPatientApiUrl(), uriBuilder -> uriBuilder.queryParam("id", id).build())
                 .retrieve()
@@ -58,6 +62,8 @@ public class PatientService {
     }
 
     public PatientResponse updatePatientById(Integer id, PatientRequest patientRequest) {
+        log.debug("Service Call : updatePatientById({}, {})", id, patientRequest);
+
         return webClientBuilder.build().put()
                 .uri(customProperties.getPatientApiUrl(), uriBuilder -> uriBuilder.queryParam("id", id).build())
                 .body(Mono.just(patientRequest), PatientRequest.class)

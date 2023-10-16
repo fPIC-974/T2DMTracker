@@ -30,17 +30,15 @@ public class WebController {
 
     @GetMapping
     public String home(Model model) {
-        log.info("Controller Call : GET /");
+        log.info("Controller Call : GET /web/patient");
         return getAllPatients(model);
     }
 
     @GetMapping("/list")
     public String getAllPatients(Model model) {
-        log.debug("Controller Call : GET /list");
+        log.debug("Controller Call : GET /web/patient/list");
 
         List<PatientResponse> patients = patientService.getAllPatients();
-
-        log.debug("Result : " + patients);
 
         model.addAttribute("patients", patients);
 
@@ -49,7 +47,8 @@ public class WebController {
 
     @GetMapping("/details")
     public String getPatientDetails(@RequestParam Integer id, NoteRequest noteRequest, Model model) {
-        log.debug("Controller Call : GET -- /details?id=" + id);
+        log.debug("Controller Call : GET -- /web/patient/details?id=" + id);
+
         PatientResponse patient = patientService.getPatientById(id);
         List<NoteResponse> notes = noteService.getNotesByPatientId(id);
         String risk = riskService.getRiskAssessmentByPatientId(id);
@@ -65,14 +64,14 @@ public class WebController {
 
     @GetMapping("/add")
     public String createPatient(PatientRequest patientRequest) {
-        log.debug("Controller Call : GET -- /patient/add : " + patientRequest);
+        log.debug("Controller Call : GET -- /web/patient/patient/add : " + patientRequest);
 
         return "patient/add";
     }
 
     @PostMapping("/validate")
     public String validate(@Valid PatientRequest patientRequest, BindingResult result, Model model) {
-        log.debug("Controller Call : POST -- /patient/validate - " + patientRequest);
+        log.debug("Controller Call : POST -- /web/patient/patient/validate - " + patientRequest);
 
         if (result.hasErrors()) {
             return "patient/add";
@@ -87,6 +86,7 @@ public class WebController {
 
     @GetMapping("/delete")
     public String deletePatient(@RequestParam Integer id, Model model) {
+        log.debug("Controller Call : GET -- /web/patient/delete - " + id);
 
         patientService.deletePatientById(id);
         noteService.deleteNotesByPatientId(id);
@@ -98,11 +98,14 @@ public class WebController {
 
     @GetMapping("/update")
     public String showUpdateForm(@RequestParam Integer id, Model model) {
-        log.debug("Controller Called : GET -- /patient/update - " + id);
+        log.debug("Controller Called : GET -- /web/patient/update - " + id);
 
         PatientResponse patientResponse = patientService.getPatientById(id);
 
-        model.addAttribute("patient", patientResponse);
+        log.debug("Result : " + patientResponse);
+
+        model.addAttribute("id", id);
+        model.addAttribute("patientRequest", patientResponse);
 
         return "patient/update";
     }
@@ -110,9 +113,10 @@ public class WebController {
     @PostMapping("/update")
     public String updatePatient(@RequestParam Integer id, @Valid PatientRequest patientRequest,
                             BindingResult result, Model model) {
-        log.debug("Controller Called : POST -- /patient/update - {} - {}", id, patientRequest);
+        log.debug("Controller Called : POST -- /web/patient/update - {} - {}", id, patientRequest);
 
         if (result.hasErrors()) {
+            model.addAttribute("id", id);
             return "patient/update";
         }
 
@@ -123,8 +127,8 @@ public class WebController {
     }
 
     @PostMapping("/validateNote")
-    public String addNote(@Valid NoteRequest noteRequest, BindingResult result, Model model) {
-        log.debug("POST -- /patient/validateNote - " + noteRequest);
+    public String addNote(@Valid NoteRequest noteRequest, Model model) {
+        log.debug("Controller Call : POST -- /web/patient/validateNote - " + noteRequest);
 
         noteService.createNote(noteRequest);
         model.addAttribute("risk", riskService.getRiskAssessmentByPatientId(noteRequest.getPatientId()));
