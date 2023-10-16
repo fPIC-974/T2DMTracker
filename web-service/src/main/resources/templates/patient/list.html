@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
@@ -24,41 +25,41 @@
     <div class="row"><h2>Patient List</h2></div>
     <div class="row">
         <div class="text-right"><a href="/web/patient/add" class="btn btn-primary btn-sm">Add Patient</a></div>
-        <div><p></p><div>
-            <table class="table table-bordered">
-                <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Last Name</th>
-                    <th>First Name</th>
-                    <th>Birth Date</th>
-                    <th>Gender</th>
-                    <th>Address</th>
-                    <th>Phone Number</th>
-                    <th>Action</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr th:if="${patients.empty}">
-                    <td colspan="3">No patients in database</td>
-                </tr>
-                <tr th:each="patient: ${patients}">
-                    <td><a th:href="@{/web/patient/details?id={id}(id=${patient.id})}"><span th:text="${patient.id}"></span></a>
-                    </td>
-                    <td><span th:text="${patient.lastName}">Last Name</span></td>
-                    <td><span th:text="${patient.firstName}">First Name</span></td>
-                    <td><span th:text="${patient.birthDate}">Birth Date</span></td>
-                    <td><span th:text="${patient.gender}">Gender</span></td>
-                    <td><span th:text="${patient.address}">Address</span></td>
-                    <td><span th:text="${patient.phone}">Phone Number</span></td>
-                    <td>
-                        <a th:href="@{/web/patient/update?id={id}(id=${patient.id})}">Edit</a>&nbsp;|&nbsp;
-                        <a th:href="@{/web/patient/delete?id={id}(id=${patient.id})}">Delete</a>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-        </div>
+        <div><p></p></div>
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Last Name</th>
+                <th>First Name</th>
+                <th>Birth Date</th>
+                <th>Gender</th>
+                <th>Address</th>
+                <th>Phone Number</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:if="${patients.isEmpty()}">
+                <td colspan="3">No patients in database</td>
+            </tr>
+            <tr th:each="patient: ${patients}">
+                <td><a th:href="@{/web/patient/details(id=${patient.id})}"><span th:text="${patient.id}"></span></a>
+                </td>
+                <td><span th:text="${patient.lastName}">Last Name</span></td>
+                <td><span th:text="${patient.firstName}">First Name</span></td>
+                <td><span th:text="${patient.birthDate}">Birth Date</span></td>
+                <td><span th:text="${patient.gender}">Gender</span></td>
+                <td><span th:text="${patient.address}">Address</span></td>
+                <td><span th:text="${patient.phone}">Phone Number</span></td>
+                <td>
+                    <a th:href="@{/web/patient/update(id=${patient.id})}">Edit</a>&nbsp;|&nbsp;
+                    <a th:href="@{/web/patient/delete(id=${patient.id})}">Delete</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
 </body>
 </html>
