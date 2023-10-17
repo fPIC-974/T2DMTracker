@@ -7,14 +7,14 @@ The goal of the project is to provide an application to handle Tier 2 Diabetes p
 #### Setup
 This project assumes *Docker* is installed on the system.
 
-You must build docker images for each of the following services :
-- `docker/mongo-t2dm`
-- `docker/mysql-t2dm`
-- `patient-service`
-- `note-service`
-- `risk-service`
-- `web-service`
-- `gateway-service`
+You must **build** docker images for each of the following services :
+- [`docker/mongo-t2dm`](#mongo-t2dm)
+- [`docker/mysql-t2dm`](#mysql-t2dm)
+- [`patient-service`](#patient-service)
+- [`note-service`](#note-service)
+- [`risk-service`](#risk-service)
+- [`web-service`](#web-service)
+- [`gateway-service`](#gateway-service)
 
 Then you can execute the following commands to start the containers :
 ```
@@ -46,6 +46,9 @@ The only port exposed to your local machine is *8080*.
 
 Open a browser and access the following *URL* :
 >http://localhost:8080
+
+Credentials : `admin:admin`
+
 ### Services
 #### mysql-t2dm
 This is a *MySQL* docker container hosting the database used by **patient-service**.
