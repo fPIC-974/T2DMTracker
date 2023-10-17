@@ -32,6 +32,7 @@ public class WebController {
     @GetMapping
     public String home(Model model, Principal principal) {
         log.info("Controller Call : GET /web/patient");
+
         return getAllPatients(model, principal);
     }
 
@@ -83,7 +84,7 @@ public class WebController {
 
         model.addAttribute("patients", patientService.getAllPatients());
 
-        return "redirect:http://localhost:8080/web/patient/list";
+        return "redirect:/web/patient/list";
     }
 
     @GetMapping("/delete")
@@ -95,7 +96,7 @@ public class WebController {
 
         model.addAttribute("patients", patientService.getAllPatients());
 
-        return "redirect:http://localhost:8080/web/patient/list";
+        return "redirect:/web/patient/list";
     }
 
     @GetMapping("/update")
@@ -125,7 +126,7 @@ public class WebController {
         patientService.updatePatientById(id, patientRequest);
         model.addAttribute("patients", patientService.getAllPatients());
 
-        return "redirect:http://localhost:8080/web/patient/list";
+        return "redirect:/web/patient/list";
     }
 
     @PostMapping("/validateNote")
@@ -135,6 +136,6 @@ public class WebController {
         noteService.createNote(noteRequest);
         model.addAttribute("risk", riskService.getRiskAssessmentByPatientId(noteRequest.getPatientId()));
 
-        return "redirect:http://localhost:8080/web/patient/details?id=" + noteRequest.getPatientId();
+        return "redirect:/web/patient/details?id=" + noteRequest.getPatientId();
     }
 }

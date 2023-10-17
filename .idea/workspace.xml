@@ -4,14 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5917bb7-e171-4812-970d-cf82c6d93bc4" name="Changes" comment="web-service:&#10;- resolving error when trying to update multiple times with fields not validated">
-      <change afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/security/SecurityConfig.java" afterDir="false" />
+    <list default="true" id="b5917bb7-e171-4812-970d-cf82c6d93bc4" name="Changes" comment="sec:&#10;- updates">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/org/fpic974/gatewayservice/GatewayServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/org/fpic974/gatewayservice/GatewayServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/resources/application-docker.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application-docker.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/controller/HomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/controller/WebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/controller/WebController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/patient/details.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/patient/details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/dto/NoteRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/dto/NoteRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/application-docker.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/application-docker.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/patient/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/patient/add.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/patient/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/patient/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/patient/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/patient/update.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,10 +32,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Interface" />
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -47,36 +58,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "/Users/fpicard/OpenClassrooms/Project-9/T2DMTracker/web-service/src/main/java/org/fpic974/webservice",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "spring.configuration.checksum": "ef7bdc975235682336333f6caf110f8d"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/fpicard/OpenClassrooms/Project-9/T2DMTracker/web-service/src/main/java/org/fpic974/webservice&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;ef7bdc975235682336333f6caf110f8d&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql",
-      "mongo"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;,
+      &quot;mongo&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice" />
@@ -120,7 +131,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in note-service">
+  <component name="RunManager" selected="JUnit.org.fpic974.patientservice in patient-service">
     <configuration name="All in note-service" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="note-service" />
       <option name="PACKAGE_NAME" value="" />
@@ -177,17 +188,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NoteServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="note-service" />
+    <configuration name="org.fpic974.patientservice in patient-service" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="patient-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.fpic974.noteservice.service.*" />
+          <option name="PATTERN" value="org.fpic974.patientservice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.fpic974.noteservice.service" />
-      <option name="MAIN_CLASS_NAME" value="org.fpic974.noteservice.service.NoteServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="org.fpic974.patientservice" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -228,11 +238,11 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.org.fpic974.patientservice in patient-service" />
       <item itemvalue="JUnit.All in note-service" />
       <item itemvalue="JUnit.NoteControllerIT.shouldCreateNote" />
       <item itemvalue="JUnit.NoteControllerIT.shouldDeleteNotesByPatientId" />
       <item itemvalue="JUnit.NoteControllerIT.shouldGetNotesByPatientId" />
-      <item itemvalue="JUnit.NoteServiceTest" />
       <item itemvalue="Spring Boot.GatewayServiceApplication" />
       <item itemvalue="Spring Boot.NoteServiceApplication" />
       <item itemvalue="Spring Boot.RiskServiceApplication" />
@@ -241,11 +251,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.org.fpic974.patientservice in patient-service" />
         <item itemvalue="JUnit.All in note-service" />
         <item itemvalue="JUnit.NoteControllerIT.shouldDeleteNotesByPatientId" />
         <item itemvalue="JUnit.NoteControllerIT.shouldCreateNote" />
         <item itemvalue="JUnit.NoteControllerIT.shouldGetNotesByPatientId" />
-        <item itemvalue="JUnit.NoteServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -267,6 +277,8 @@
       <workItem from="1697330301023" duration="1288000" />
       <workItem from="1697364536087" duration="555000" />
       <workItem from="1697400387563" duration="2696000" />
+      <workItem from="1697469155733" duration="16453000" />
+      <workItem from="1697504118674" duration="5200000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Setup&#10;patient-service base implementation">
       <created>1697300989287</created>
@@ -352,7 +364,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697451138778</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="sec:&#10;- updates">
+      <created>1697458311907</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1697458311907</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -396,7 +415,8 @@
     <MESSAGE value="patient-service:&#10;- tests finalization" />
     <MESSAGE value="note-service:&#10;- tests finalization" />
     <MESSAGE value="web-service:&#10;- resolving error when trying to update multiple times with fields not validated" />
-    <option name="LAST_COMMIT_MESSAGE" value="web-service:&#10;- resolving error when trying to update multiple times with fields not validated" />
+    <MESSAGE value="sec:&#10;- updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="sec:&#10;- updates" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
