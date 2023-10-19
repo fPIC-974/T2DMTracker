@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5917bb7-e171-4812-970d-cf82c6d93bc4" name="Changes" comment="Added to *-service application.properties :&#10;server.forward-headers-strategy=framework">
-      <change afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/config/WebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/dto/CredentialsDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/dto/UserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/service/UserService.java" afterDir="false" />
+    <list default="true" id="b5917bb7-e171-4812-970d-cf82c6d93bc4" name="Changes" comment="web-service : base JWT implementation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,7 +267,7 @@
       <workItem from="1697400387563" duration="2696000" />
       <workItem from="1697469155733" duration="16453000" />
       <workItem from="1697504118674" duration="5611000" />
-      <workItem from="1697714418422" duration="3740000" />
+      <workItem from="1697714418422" duration="4516000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Setup&#10;patient-service base implementation">
       <created>1697300989287</created>
@@ -387,7 +381,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697715736676</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="web-service : base JWT implementation">
+      <created>1697718349343</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1697718349343</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -435,7 +436,8 @@
     <MESSAGE value="sec:&#10;- many issues with security when in container mode, resolved by using : server.forward-headers-strategy=framework&#10;- need to secure access to APIs" />
     <MESSAGE value="test" />
     <MESSAGE value="Added to *-service application.properties :&#10;server.forward-headers-strategy=framework" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added to *-service application.properties :&#10;server.forward-headers-strategy=framework" />
+    <MESSAGE value="web-service : base JWT implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="web-service : base JWT implementation" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
