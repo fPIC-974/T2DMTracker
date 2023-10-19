@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b5917bb7-e171-4812-970d-cf82c6d93bc4" name="Changes" comment="sec:&#10;- many issues with security when in container mode, resolved by using : server.forward-headers-strategy=framework&#10;- need to secure access to APIs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,11 +234,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.org.fpic974.patientservice in patient-service" />
-        <item itemvalue="JUnit.All in note-service" />
+        <item itemvalue="JUnit.NoteControllerIT.shouldGetNotesByPatientId" />
         <item itemvalue="JUnit.NoteControllerIT.shouldDeleteNotesByPatientId" />
         <item itemvalue="JUnit.NoteControllerIT.shouldCreateNote" />
-        <item itemvalue="JUnit.NoteControllerIT.shouldGetNotesByPatientId" />
+        <item itemvalue="JUnit.All in note-service" />
+        <item itemvalue="JUnit.org.fpic974.patientservice in patient-service" />
       </list>
     </recent_temporary>
   </component>
@@ -263,6 +262,7 @@
       <workItem from="1697400387563" duration="2696000" />
       <workItem from="1697469155733" duration="16453000" />
       <workItem from="1697504118674" duration="5611000" />
+      <workItem from="1697714418422" duration="862000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Setup&#10;patient-service base implementation">
       <created>1697300989287</created>
