@@ -2,11 +2,14 @@ package org.fpic974.gatewayservice.config;
 
 import lombok.extern.slf4j.Slf4j;
 import org.fpic974.gatewayservice.dto.UserDto;
+import org.springframework.boot.web.server.Cookie;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.factory.AbstractGatewayFilterFactory;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
+
+import java.util.Objects;
 
 @Component
 @Slf4j
@@ -28,10 +31,27 @@ public class AuthFilter extends AbstractGatewayFilterFactory<AuthFilter.Config> 
 
             String authHeader = exchange.getRequest().getHeaders().get(HttpHeaders.AUTHORIZATION).get(0);
 
-            String[] parts = authHeader.split(" ");
+            /*String[] parts = authHeader.split(" ");
 
             if (parts.length != 2 || !"Bearer".equals(parts[0])) {
                 throw new RuntimeException("Incorrect authorization structure");
+            }*/
+
+            String[] parts = null;
+
+            if (exchange.getRequest().getCookies().get("Authorization") != null) {
+
+                parts = exchange.getRequest().getCookies().get("Authorization").get(0).toString().split("=");
+
+                if (parts.length != 2 || !"Authorization".equals(parts[0])) {
+                    throw new RuntimeException("Incorrect authorization structure");
+                }
+            } else {
+                parts = authHeader.split(" ");
+
+                if (parts.length != 2 || !"Bearer".equals(parts[0])) {
+                    throw new RuntimeException("Incorrect authorization structure");
+                }
             }
 
             return webClientBuilder.build()
