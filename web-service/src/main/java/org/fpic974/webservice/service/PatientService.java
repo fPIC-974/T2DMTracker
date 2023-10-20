@@ -6,8 +6,12 @@ import org.fpic974.webservice.config.CustomProperties;
 import org.fpic974.webservice.dto.PatientRequest;
 import org.fpic974.webservice.dto.PatientResponse;
 import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
+import org.springframework.http.HttpHeaders;
 import reactor.core.publisher.Mono;
 
 import java.util.List;
@@ -20,11 +24,22 @@ public class PatientService {
     private final CustomProperties customProperties;
     private final WebClient.Builder webClientBuilder;
 
+    private final UserDetailsService userDetailsService;
+
+    private final UserService userService;
+
     public List<PatientResponse> getAllPatients() {
         log.debug("Service Call : getAllPatients()");
 
-        return webClientBuilder.build().get()
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String token = userService.createToken(userDetailsService.loadUserByUsername(auth.getName()));
+
+        log.info("AUTH : " + auth.getName());
+
+        return webClientBuilder
+                .build().get()
                 .uri(customProperties.getPatientApiUrl() + "/list")
+                .header(HttpHeaders.AUTHORIZATION, "Bearer " + token)
                 .retrieve()
                 .bodyToMono(new ParameterizedTypeReference<List<PatientResponse>>() {})
                 .block();

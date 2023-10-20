@@ -4,9 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5917bb7-e171-4812-970d-cf82c6d93bc4" name="Changes" comment="web-service : base JWT implementation">
+    <list default="true" id="b5917bb7-e171-4812-970d-cf82c6d93bc4" name="Changes" comment="web-service : JWT implementation validated">
+      <change afterPath="$PROJECT_DIR$/gateway-service/src/main/java/org/fpic974/gatewayservice/config/AuthFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-service/src/main/java/org/fpic974/gatewayservice/config/WebClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-service/src/main/java/org/fpic974/gatewayservice/dto/UserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/config/JwtAuthFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/config/WebClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/config/WebClientConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/controller/WebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/controller/WebController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/service/PatientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/service/PatientService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +33,9 @@
       </list>
     </option>
   </component>
+  <component name="FindBugs-IDEA-Workspace">
+    <toolWindowEditorPreview>false</toolWindowEditorPreview>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -31,6 +43,10 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.1.4/spring-security-config-6.1.4-sources.jar!/org/springframework/security/config/annotation/web/builders/HttpSecurity.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/6.0.12/spring-webmvc-6.0.12-sources.jar!/org/springframework/web/servlet/config/annotation/WebMvcConfigurer.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -102,6 +118,7 @@
       <recent name="org.fpic974.patientservice.service" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.fpic974.gatewayservice.dto" />
       <recent name="org.fpic974.riskservice.config" />
       <recent name="org.fpic974.webservice.security" />
       <recent name="org.fpic974.webservice.dto" />
@@ -267,7 +284,9 @@
       <workItem from="1697400387563" duration="2696000" />
       <workItem from="1697469155733" duration="16453000" />
       <workItem from="1697504118674" duration="5611000" />
-      <workItem from="1697714418422" duration="4516000" />
+      <workItem from="1697714418422" duration="15506000" />
+      <workItem from="1697737161751" duration="4823000" />
+      <workItem from="1697754240196" duration="10365000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Setup&#10;patient-service base implementation">
       <created>1697300989287</created>
@@ -388,7 +407,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697718349343</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="web-service : JWT implementation validated">
+      <created>1697719255846</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1697719255846</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -437,7 +463,8 @@
     <MESSAGE value="test" />
     <MESSAGE value="Added to *-service application.properties :&#10;server.forward-headers-strategy=framework" />
     <MESSAGE value="web-service : base JWT implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="web-service : base JWT implementation" />
+    <MESSAGE value="web-service : JWT implementation validated" />
+    <option name="LAST_COMMIT_MESSAGE" value="web-service : JWT implementation validated" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

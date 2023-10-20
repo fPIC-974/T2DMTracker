@@ -26,9 +26,7 @@ import java.util.Date;
 public class UserService {
 
     private final UserDetailsService userDetailsService;
-//    private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
-//    private final UserMapper userMapper;
 
     @Value("${security.jwt.token.secret-key:secret-key}")
     private String secretKey;
@@ -60,11 +58,6 @@ public class UserService {
     }
 
     public UserDto validateToken(String token) {
-        /*String login = Jwts.parser()
-                .setSigningKey(secretKey)
-                .parseClaimsJws(token)
-                .getBody()
-                .getSubject();*/
 
         String login = Jwts.parserBuilder()
                 .setSigningKey(getSigningKey())
@@ -75,15 +68,13 @@ public class UserService {
 
         UserDetails user = userDetailsService.loadUserByUsername(login);
 
-//        return userMapper.toUserDto(user, createToken(user));
-
         return UserDto.builder()
                 .username(user.getUsername())
                 .token(createToken(user))
                 .build();
     }
 
-    private String createToken(UserDetails user) {
+    public String createToken(UserDetails user) {
         Claims claims = Jwts.claims().setSubject(user.getUsername());
 
         Date now = new Date();
