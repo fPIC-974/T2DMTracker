@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5917bb7-e171-4812-970d-cf82c6d93bc4" name="Changes" comment="web-service : JWT implementation validated">
+    <list default="true" id="b5917bb7-e171-4812-970d-cf82c6d93bc4" name="Changes" comment="web-service : added token validation to services">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/controller/WebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/controller/WebController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/service/NoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/service/NoteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/service/PatientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/service/PatientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/service/RiskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/service/RiskService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

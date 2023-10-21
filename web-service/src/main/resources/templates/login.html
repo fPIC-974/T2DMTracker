@@ -39,6 +39,12 @@
     <div class="container text-center"><h1><span class="badge bg-success">Welcome to T2DM Tracker</span></h1></div>
     <form class="form-signin" method="post" th:action="@{/signIn}">
         <h2 class="form-signin-heading">Please sign in</h2>
+        <div th:if="${param.logout}" class="alert alert-success">
+            You have been logged out.
+        </div>
+        <div th:if="${param.error}" class="alert alert-error">
+            Invalid username and password.
+        </div>
         <p>
             <label for="username" class="sr-only">Username</label>
             <input type="text" id="username" name="username" class="form-control" placeholder="Username" required

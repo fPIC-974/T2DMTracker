@@ -28,7 +28,9 @@ public class SecurityConfig {
         http
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests((requests) -> requests
-                        .anyRequest().permitAll());
+                        .anyRequest().permitAll())
+                .logout((logout) -> logout
+                        .deleteCookies("Authorization"));
 
         return http.build();
 

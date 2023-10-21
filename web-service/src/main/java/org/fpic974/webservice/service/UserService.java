@@ -38,17 +38,24 @@ public class UserService {
 
     public UserDto signIn(CredentialsDto credentialsDto) {
         UserDetails user = userDetailsService.loadUserByUsername(credentialsDto.getUsername());
+        UserDto userDto = null;
 
         if (passwordEncoder.matches(credentialsDto.getPassword(), user.getPassword())) {
             log.info("Passwords match ...");
 
-            return UserDto.builder()
+            /*return UserDto.builder()
+                    .username(user.getUsername())
+                    .token(createToken(user))
+                    .build();*/
+            userDto = UserDto.builder()
                     .username(user.getUsername())
                     .token(createToken(user))
                     .build();
         }
 
-        throw new RuntimeException("Invalid password");
+//        throw new RuntimeException("Invalid password");
+
+        return userDto;
     }
 
 
