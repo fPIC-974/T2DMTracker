@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5917bb7-e171-4812-970d-cf82c6d93bc4" name="Changes" comment="risk-service : updated token pass through">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/org/fpic974/gatewayservice/config/AuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/org/fpic974/gatewayservice/config/AuthFilter.java" afterDir="false" />
-    </list>
+    <list default="true" id="b5917bb7-e171-4812-970d-cf82c6d93bc4" name="Changes" comment="gateway-service : hot fix on AuthFilter.java (wouldn't authenticate on Chrome)" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -418,7 +415,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697882663608</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="gateway-service : hot fix on AuthFilter.java (wouldn't authenticate on Chrome)">
+      <created>1697930454694</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1697930454694</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -470,7 +474,8 @@
     <MESSAGE value="web-service : JWT implementation validated" />
     <MESSAGE value="web-service : updated web interface" />
     <MESSAGE value="risk-service : updated token pass through" />
-    <option name="LAST_COMMIT_MESSAGE" value="risk-service : updated token pass through" />
+    <MESSAGE value="gateway-service : hot fix on AuthFilter.java (wouldn't authenticate on Chrome)" />
+    <option name="LAST_COMMIT_MESSAGE" value="gateway-service : hot fix on AuthFilter.java (wouldn't authenticate on Chrome)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
