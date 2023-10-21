@@ -54,7 +54,8 @@ public class WebController {
 
         PatientResponse patient = patientService.getPatientById(id);
         List<NoteResponse> notes = noteService.getNotesByPatientId(id);
-        String risk = riskService.getRiskAssessmentByPatientId(id);
+//        String risk = riskService.getRiskAssessmentByPatientId(id);
+        String risk = "Test";
 
         model.addAttribute("patient", patient);
         model.addAttribute("notes", notes);

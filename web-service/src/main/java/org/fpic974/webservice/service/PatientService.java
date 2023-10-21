@@ -48,8 +48,13 @@ public class PatientService {
     public PatientResponse getPatientById(Integer id) {
         log.debug("Service Call : getPatientById({})", id);
 
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String token = userService.createToken(userDetailsService.loadUserByUsername(auth.getName()));
+
         return webClientBuilder.build().get()
                 .uri(customProperties.getPatientApiUrl(), uriBuilder -> uriBuilder.queryParam("id", id).build())
+                .header(HttpHeaders.AUTHORIZATION, "Bearer " + token)
+                .header(HttpHeaders.AUTHORIZATION, "Bearer " + token)
                 .retrieve()
                 .bodyToMono(PatientResponse.class)
                 .block();
@@ -58,8 +63,12 @@ public class PatientService {
     public PatientResponse createPatient(PatientRequest patientRequest) {
         log.debug("Service Call : createPatient({})", patientRequest);
 
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String token = userService.createToken(userDetailsService.loadUserByUsername(auth.getName()));
+
         return webClientBuilder.build().post()
                 .uri(customProperties.getPatientApiUrl())
+                .header(HttpHeaders.AUTHORIZATION, "Bearer " + token)
                 .body(Mono.just(patientRequest), PatientRequest.class)
                 .retrieve()
                 .bodyToMono(PatientResponse.class)
@@ -69,8 +78,12 @@ public class PatientService {
     public void deletePatientById(Integer id) {
         log.debug("Service Call : deletePatientById({})", id);
 
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String token = userService.createToken(userDetailsService.loadUserByUsername(auth.getName()));
+
         webClientBuilder.build().delete()
                 .uri(customProperties.getPatientApiUrl(), uriBuilder -> uriBuilder.queryParam("id", id).build())
+                .header(HttpHeaders.AUTHORIZATION, "Bearer " + token)
                 .retrieve()
                 .bodyToMono(Void.class)
                 .block();
@@ -79,8 +92,12 @@ public class PatientService {
     public PatientResponse updatePatientById(Integer id, PatientRequest patientRequest) {
         log.debug("Service Call : updatePatientById({}, {})", id, patientRequest);
 
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String token = userService.createToken(userDetailsService.loadUserByUsername(auth.getName()));
+
         return webClientBuilder.build().put()
                 .uri(customProperties.getPatientApiUrl(), uriBuilder -> uriBuilder.queryParam("id", id).build())
+                .header(HttpHeaders.AUTHORIZATION, "Bearer " + token)
                 .body(Mono.just(patientRequest), PatientRequest.class)
                 .retrieve()
                 .bodyToMono(PatientResponse.class)
