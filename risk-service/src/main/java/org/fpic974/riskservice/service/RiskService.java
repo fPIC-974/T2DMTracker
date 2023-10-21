@@ -8,6 +8,7 @@ import org.fpic974.riskservice.dto.NoteResponse;
 import org.fpic974.riskservice.dto.PatientResponse;
 import org.fpic974.riskservice.model.RiskAssessment;
 import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
@@ -40,11 +41,12 @@ public class RiskService {
             "Réaction",
             "Anticorps");
 
-    public List<String> getTriggersByPatientId(Integer id) {
+    public List<String> getTriggersByPatientId(Integer id, String token) {
         List<String> triggerList = new ArrayList<>();
 
         List<NoteResponse> notes = webClientBuilder.build().get()
                 .uri(customProperties.getNoteApiUrl(), uriBuilder -> uriBuilder.queryParam("id", id).build())
+                .header(HttpHeaders.AUTHORIZATION, token)
                 .retrieve()
                 .bodyToMono(new ParameterizedTypeReference<List<NoteResponse>>() { })
                 .block();
@@ -79,9 +81,10 @@ public class RiskService {
         return StringUtils.containsIgnoreCase(noteResponse.getNote(), trigger);
     }
 
-    public String getRiskAssessmentByPatientId(Integer id) {
+    public String getRiskAssessmentByPatientId(Integer id, String token) {
         PatientResponse patient = webClientBuilder.build().get()
                 .uri(customProperties.getPatientApiUrl(), uriBuilder -> uriBuilder.queryParam("id", id).build())
+                .header(HttpHeaders.AUTHORIZATION, token)
                 .retrieve()
                 .bodyToMono(PatientResponse.class)
                 .block();
@@ -89,7 +92,7 @@ public class RiskService {
         RiskAssessment riskAssessment = RiskAssessment.builder()
                 .age(LocalDate.now().compareTo(patient.getBirthDate()))
                 .gender(patient.getGender())
-                .risks(getTriggersByPatientId(id))
+                .risks(getTriggersByPatientId(id, token))
                 .build();
 
         if (riskAssessment.isEarlyOnSet()) {

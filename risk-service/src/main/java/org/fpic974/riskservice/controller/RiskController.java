@@ -1,5 +1,6 @@
 package org.fpic974.riskservice.controller;
 
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.fpic974.riskservice.service.RiskService;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,7 +14,9 @@ public class RiskController {
     private final RiskService riskService;
 
     @GetMapping("/api/risk")
-    public String getRiskAssessmentByPatientId(@RequestParam Integer id) {
-        return riskService.getRiskAssessmentByPatientId(id);
+    public String getRiskAssessmentByPatientId(@RequestParam Integer id, HttpServletRequest request) {
+        String token = request.getHeader("Authorization");
+
+        return riskService.getRiskAssessmentByPatientId(id, token);
     }
 }
