@@ -4,12 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5917bb7-e171-4812-970d-cf82c6d93bc4" name="Changes" comment="web-service : updated web interface">
+    <list default="true" id="b5917bb7-e171-4812-970d-cf82c6d93bc4" name="Changes" comment="risk-service : updated token pass through">
+      <change afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/error.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/org/fpic974/gatewayservice/config/AuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/org/fpic974/gatewayservice/config/AuthFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/controller/RiskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/controller/RiskController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/service/RiskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/service/RiskService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/controller/WebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/controller/WebController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/resources/application-docker.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application-docker.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note-service/src/main/resources/application-docker.properties" beforeDir="false" afterPath="$PROJECT_DIR$/note-service/src/main/resources/application-docker.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/src/main/resources/application-docker.properties" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/resources/application-docker.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/risk-service/src/main/resources/application-docker.properties" beforeDir="false" afterPath="$PROJECT_DIR$/risk-service/src/main/resources/application-docker.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/WebServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/WebServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/application-docker.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/application-docker.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -414,7 +419,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697881159164</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="risk-service : updated token pass through">
+      <created>1697882663608</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1697882663608</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -465,7 +477,8 @@
     <MESSAGE value="web-service : base JWT implementation" />
     <MESSAGE value="web-service : JWT implementation validated" />
     <MESSAGE value="web-service : updated web interface" />
-    <option name="LAST_COMMIT_MESSAGE" value="web-service : updated web interface" />
+    <MESSAGE value="risk-service : updated token pass through" />
+    <option name="LAST_COMMIT_MESSAGE" value="risk-service : updated token pass through" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
