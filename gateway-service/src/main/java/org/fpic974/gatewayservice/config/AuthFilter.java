@@ -2,14 +2,11 @@ package org.fpic974.gatewayservice.config;
 
 import lombok.extern.slf4j.Slf4j;
 import org.fpic974.gatewayservice.dto.UserDto;
-import org.springframework.boot.web.server.Cookie;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.factory.AbstractGatewayFilterFactory;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
-
-import java.util.Objects;
 
 @Component
 @Slf4j
@@ -25,17 +22,11 @@ public class AuthFilter extends AbstractGatewayFilterFactory<AuthFilter.Config> 
     @Override
     public GatewayFilter apply(Config config) {
         return (exchange, chain) -> {
-            if (!exchange.getRequest().getHeaders().containsKey(HttpHeaders.AUTHORIZATION)) {
+            log.info(exchange.getRequest().getHeaders().toString());
+            if (!exchange.getRequest().getHeaders().containsKey(HttpHeaders.AUTHORIZATION)
+                    && exchange.getRequest().getCookies().get("Authorization") == null) {
                 throw new RuntimeException("Missing authorization information");
             }
-
-            String authHeader = exchange.getRequest().getHeaders().get(HttpHeaders.AUTHORIZATION).get(0);
-
-            /*String[] parts = authHeader.split(" ");
-
-            if (parts.length != 2 || !"Bearer".equals(parts[0])) {
-                throw new RuntimeException("Incorrect authorization structure");
-            }*/
 
             String[] parts = null;
 
@@ -47,6 +38,7 @@ public class AuthFilter extends AbstractGatewayFilterFactory<AuthFilter.Config> 
                     throw new RuntimeException("Incorrect authorization structure");
                 }
             } else {
+                String authHeader = exchange.getRequest().getHeaders().get(HttpHeaders.AUTHORIZATION).get(0);
                 parts = authHeader.split(" ");
 
                 if (parts.length != 2 || !"Bearer".equals(parts[0])) {
@@ -61,7 +53,6 @@ public class AuthFilter extends AbstractGatewayFilterFactory<AuthFilter.Config> 
                     .map(userDto -> {
                         exchange.getRequest()
                                 .mutate()
-//                                .header("X-auth-user-id", String.valueOf(userDto.getId()));
                                 .header("X-auth-user-id", String.valueOf(userDto.getUsername()));
                         return exchange;
                     }).flatMap(chain::filter);
