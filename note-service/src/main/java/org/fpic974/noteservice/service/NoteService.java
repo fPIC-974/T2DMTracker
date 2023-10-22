@@ -13,16 +13,22 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 @Slf4j
-public class NoteService {
+public class NoteService implements INoteService {
 
     private final NoteRepository noteRepository;
 
+    @Override
     public List<NoteResponse> getNotesByPatientId(String id) {
-        log.debug("Calling Service : getNotesByPatientId({})", id);
+        log.debug(">> Calling method : getNotesByPatientId({})", id);
+
+        if (!noteRepository.existsByPatientId(id)) {
+            log.debug("<< No object found with id {}", id);
+            throw new IllegalArgumentException("Invalid id");
+        }
 
         List<Note> notes = noteRepository.findByPatientId(id);
 
-        log.debug("Result : " + notes);
+        log.debug(">> Result         : {} object(s)", notes.size());
 
         return notes.stream()
                 .map(note -> NoteResponse.builder()
@@ -31,17 +37,18 @@ public class NoteService {
                         .build()).toList();
     }
 
+    @Override
     public NoteResponse createNote(NoteRequest noteRequest) {
-        log.debug("Calling Service : createNote({})", noteRequest);
+        log.debug(">> Calling method : createNote({})", noteRequest);
 
         Note note = Note.builder()
                 .patientId(noteRequest.getPatientId())
                 .note(noteRequest.getNote())
                 .build();
 
-        noteRepository.save(note);
+        Note noteSaved = noteRepository.save(note);
 
-        log.debug("Result : Note with id {} created", note.getId());
+        log.debug("<< Result         : object with id {} created", noteSaved.getId());
 
         return NoteResponse.builder()
                 .patientId(note.getPatientId())
@@ -49,11 +56,17 @@ public class NoteService {
                 .build();
     }
 
+    @Override
     public void deleteNotesByPatientId(String id) {
-        log.debug("Service Call : deleteNotesByPatientId({})", id);
+        log.debug(">> Calling method : deleteNotesByPatientId({})", id);
+
+        if (!noteRepository.existsByPatientId(id)) {
+            log.debug("<< No object found with id {}", id);
+            throw new IllegalArgumentException("Invalid id");
+        }
 
         noteRepository.deleteByPatientId(id);
 
-        log.debug("Result : Notes for Patient Id {} deleted", id);
+        log.debug("<< Result         : objects with patientId {} deleted", id);
     }
 }

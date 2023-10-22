@@ -21,6 +21,7 @@ public class PatientService implements IPatientService {
     @Override
     public List<PatientResponse> getAllPatients() {
         log.debug(">> Calling method : getAllPatients()");
+
         List<Patient> patients = patientRepository.findAll();
 
         log.debug(">> Result         : {} object(s)", patients.size());

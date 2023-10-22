@@ -8,6 +8,7 @@ import java.util.List;
 
 @Repository
 public interface NoteRepository extends MongoRepository<Note, String> {
+    boolean existsByPatientId(String id);
     List<Note> findByPatientId(String id);
 
     void deleteByPatientId(String id);
