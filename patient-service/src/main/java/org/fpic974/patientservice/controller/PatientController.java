@@ -38,7 +38,7 @@ public class PatientController {
         try {
             patientResponse = patientService.getPatientById(id);
         } catch (IllegalArgumentException iae) {
-            throw new CustomException("Invalid parameter", HttpStatus.BAD_REQUEST);
+            throw new CustomException(iae, HttpStatus.BAD_REQUEST);
         }
 
         return patientResponse;
@@ -60,7 +60,7 @@ public class PatientController {
         try {
             patientService.deletePatientById(id);
         } catch (IllegalArgumentException iae) {
-            throw new CustomException("Invalid parameter", HttpStatus.BAD_REQUEST);
+            throw new CustomException(iae, HttpStatus.BAD_REQUEST);
         }
     }
 
@@ -74,7 +74,7 @@ public class PatientController {
         try {
             patientResponse = patientService.updatePatientById(id, patientRequest);
         } catch (IllegalArgumentException iae) {
-            throw new CustomException("Invalid parameter", HttpStatus.BAD_REQUEST);
+            throw new CustomException("Invalid parameter", HttpStatus.NOT_FOUND);
         }
 
         return patientResponse;

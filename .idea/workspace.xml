@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5917bb7-e171-4812-970d-cf82c6d93bc4" name="Changes" comment="patient-service : added exception handling">
+    <list default="true" id="b5917bb7-e171-4812-970d-cf82c6d93bc4" name="Changes" comment="patient-service : updated unit tests">
+      <change afterPath="$PROJECT_DIR$/patient-service/src/main/java/org/fpic974/patientservice/exception/ApiExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-service/src/test/java/org/fpic974/patientservice/service/PatientServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/test/java/org/fpic974/patientservice/service/PatientServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/org/fpic974/patientservice/controller/PatientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/org/fpic974/patientservice/controller/PatientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/org/fpic974/patientservice/exception/CustomException.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/org/fpic974/patientservice/exception/CustomException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/src/test/java/org/fpic974/patientservice/controller/PatientControllerIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/test/java/org/fpic974/patientservice/controller/PatientControllerIT.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,82 +129,74 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PatientServiceTest.shouldNotUpdatePatientIllegalArgument">
-    <configuration name="PatientServiceTest.shouldCreatePatient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.PatientControllerIT.shouldNotUpdatePatientByInvalidId">
+    <configuration name="All in patient-service" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="patient-service" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PatientControllerIT.shouldNotDeletePatientById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="patient-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.fpic974.patientservice.service.*" />
+          <option name="PATTERN" value="org.fpic974.patientservice.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.fpic974.patientservice.service" />
-      <option name="MAIN_CLASS_NAME" value="org.fpic974.patientservice.service.PatientServiceTest" />
-      <option name="METHOD_NAME" value="shouldCreatePatient" />
+      <option name="PACKAGE_NAME" value="org.fpic974.patientservice.controller" />
+      <option name="MAIN_CLASS_NAME" value="org.fpic974.patientservice.controller.PatientControllerIT" />
+      <option name="METHOD_NAME" value="shouldNotDeletePatientById" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PatientServiceTest.shouldDeletePatientById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PatientControllerIT.shouldNotDeletePatientByInvalidId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="patient-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.fpic974.patientservice.service.*" />
+          <option name="PATTERN" value="org.fpic974.patientservice.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.fpic974.patientservice.service" />
-      <option name="MAIN_CLASS_NAME" value="org.fpic974.patientservice.service.PatientServiceTest" />
-      <option name="METHOD_NAME" value="shouldDeletePatientById" />
+      <option name="PACKAGE_NAME" value="org.fpic974.patientservice.controller" />
+      <option name="MAIN_CLASS_NAME" value="org.fpic974.patientservice.controller.PatientControllerIT" />
+      <option name="METHOD_NAME" value="shouldNotDeletePatientByInvalidId" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PatientServiceTest.shouldNotDeletePatientIllegalArgument" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PatientControllerIT.shouldNotGetPatientByInvalidId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="patient-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.fpic974.patientservice.service.*" />
+          <option name="PATTERN" value="org.fpic974.patientservice.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.fpic974.patientservice.service" />
-      <option name="MAIN_CLASS_NAME" value="org.fpic974.patientservice.service.PatientServiceTest" />
-      <option name="METHOD_NAME" value="shouldNotDeletePatientIllegalArgument" />
+      <option name="PACKAGE_NAME" value="org.fpic974.patientservice.controller" />
+      <option name="MAIN_CLASS_NAME" value="org.fpic974.patientservice.controller.PatientControllerIT" />
+      <option name="METHOD_NAME" value="shouldNotGetPatientByInvalidId" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PatientServiceTest.shouldNotUpdatePatientIllegalArgument" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PatientControllerIT.shouldNotUpdatePatientByInvalidId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="patient-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.fpic974.patientservice.service.*" />
+          <option name="PATTERN" value="org.fpic974.patientservice.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.fpic974.patientservice.service" />
-      <option name="MAIN_CLASS_NAME" value="org.fpic974.patientservice.service.PatientServiceTest" />
-      <option name="METHOD_NAME" value="shouldNotUpdatePatientIllegalArgument" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PatientServiceTest.shouldUpdatePatient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="patient-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.fpic974.patientservice.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.fpic974.patientservice.service" />
-      <option name="MAIN_CLASS_NAME" value="org.fpic974.patientservice.service.PatientServiceTest" />
-      <option name="METHOD_NAME" value="shouldUpdatePatient" />
+      <option name="PACKAGE_NAME" value="org.fpic974.patientservice.controller" />
+      <option name="MAIN_CLASS_NAME" value="org.fpic974.patientservice.controller.PatientControllerIT" />
+      <option name="METHOD_NAME" value="shouldNotUpdatePatientByInvalidId" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -243,11 +238,11 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.PatientServiceTest.shouldCreatePatient" />
-      <item itemvalue="JUnit.PatientServiceTest.shouldDeletePatientById" />
-      <item itemvalue="JUnit.PatientServiceTest.shouldNotDeletePatientIllegalArgument" />
-      <item itemvalue="JUnit.PatientServiceTest.shouldNotUpdatePatientIllegalArgument" />
-      <item itemvalue="JUnit.PatientServiceTest.shouldUpdatePatient" />
+      <item itemvalue="JUnit.All in patient-service" />
+      <item itemvalue="JUnit.PatientControllerIT.shouldNotDeletePatientById" />
+      <item itemvalue="JUnit.PatientControllerIT.shouldNotDeletePatientByInvalidId" />
+      <item itemvalue="JUnit.PatientControllerIT.shouldNotGetPatientByInvalidId" />
+      <item itemvalue="JUnit.PatientControllerIT.shouldNotUpdatePatientByInvalidId" />
       <item itemvalue="Spring Boot.GatewayServiceApplication" />
       <item itemvalue="Spring Boot.NoteServiceApplication" />
       <item itemvalue="Spring Boot.RiskServiceApplication" />
@@ -256,11 +251,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PatientServiceTest.shouldNotUpdatePatientIllegalArgument" />
-        <item itemvalue="JUnit.PatientServiceTest.shouldUpdatePatient" />
-        <item itemvalue="JUnit.PatientServiceTest.shouldNotDeletePatientIllegalArgument" />
-        <item itemvalue="JUnit.PatientServiceTest.shouldDeletePatientById" />
-        <item itemvalue="JUnit.PatientServiceTest.shouldCreatePatient" />
+        <item itemvalue="JUnit.PatientControllerIT.shouldNotUpdatePatientByInvalidId" />
+        <item itemvalue="JUnit.PatientControllerIT.shouldNotDeletePatientByInvalidId" />
+        <item itemvalue="JUnit.All in patient-service" />
+        <item itemvalue="JUnit.PatientControllerIT.shouldNotDeletePatientById" />
+        <item itemvalue="JUnit.PatientControllerIT.shouldNotGetPatientByInvalidId" />
       </list>
     </recent_temporary>
   </component>
@@ -470,7 +465,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697966497279</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="patient-service : updated unit tests">
+      <created>1697967842313</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1697967842313</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -501,7 +503,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="gateway-service :&#10;- created route for patient-service" />
     <MESSAGE value="Created web-service with thymeleaf templates&#10;gateway-service :&#10;- created route for web-service" />
     <MESSAGE value="- Added Dockerfile for mongo-t2dm image creation&#10;- Updated README.md with usage" />
     <MESSAGE value="- Created note-service with base components (GET/POST)" />
@@ -526,7 +527,8 @@
     <MESSAGE value="patient-service : javadoc" />
     <MESSAGE value="patient-service : javadoc updated" />
     <MESSAGE value="patient-service : added exception handling" />
-    <option name="LAST_COMMIT_MESSAGE" value="patient-service : added exception handling" />
+    <MESSAGE value="patient-service : updated unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="patient-service : updated unit tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

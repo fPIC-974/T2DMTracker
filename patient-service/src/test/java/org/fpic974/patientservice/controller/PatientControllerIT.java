@@ -39,9 +39,17 @@ class PatientControllerIT {
     @Test
     public void shouldGetPatientById() throws Exception {
         mockMvc.perform(get("/api/patient")
-                .param("id", "4"))
+                        .param("id", "4"))
+                .andExpect(status().isOk())
                 .andExpect(jsonPath("$.lastName", is("TestEarlyOnSet")))
                 .andExpect(jsonPath("$.firstName", is("Test")));
+    }
+
+    @Test
+    public void shouldNotGetPatientByInvalidId() throws Exception {
+        mockMvc.perform(get("/api/patient")
+                        .param("id", "44"))
+                .andExpect(status().isBadRequest());
     }
 
     @Test
@@ -59,9 +67,9 @@ class PatientControllerIT {
         objectMapper.registerModule(new JavaTimeModule());
 
         mockMvc.perform(post("/api/patient")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(patientRequest))
-                .accept(MediaType.APPLICATION_JSON))
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(patientRequest))
+                        .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isCreated())
                 .andExpect(jsonPath("$.lastName", is("Doe")))
                 .andExpect(jsonPath("$.firstName", is("John")));
@@ -71,9 +79,17 @@ class PatientControllerIT {
     @Transactional
     public void shouldDeletePatientById() {
         assertThatCode(() -> mockMvc.perform(delete("/api/patient")
-                .param("id", "4"))
+                        .param("id", "4"))
                 .andExpect(status().isOk()))
                 .doesNotThrowAnyException();
+    }
+
+    @Test
+    @Transactional
+    public void shouldNotDeletePatientByInvalidId() throws Exception {
+        mockMvc.perform(delete("/api/patient")
+                        .param("id", "44"))
+                .andExpect(status().isBadRequest());
     }
 
     @Test
@@ -97,5 +113,26 @@ class PatientControllerIT {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.lastName", is("Doe")))
                 .andExpect(jsonPath("$.firstName", is("John")));
+    }
+
+    @Test
+    @Transactional
+    public void shouldNotUpdatePatientByInvalidId() throws Exception {
+        PatientRequest patientRequest = PatientRequest.builder()
+                .lastName("Doe")
+                .firstName("John")
+                .gender('M')
+                .birthDate(LocalDate.now())
+                .build();
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.registerModule(new JavaTimeModule());
+
+        mockMvc.perform(put("/api/patient")
+                        .param("id", "44")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(patientRequest))
+                        .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isBadRequest());
     }
 }
