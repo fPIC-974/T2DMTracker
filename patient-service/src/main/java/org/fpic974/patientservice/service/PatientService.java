@@ -18,11 +18,6 @@ public class PatientService implements IPatientService {
 
     private final PatientRepository patientRepository;
 
-    /**
-     * Returns all instances of the type {@code PatientResponse}.
-     *
-     * @return the list of entities retrieved.
-     */
     @Override
     public List<PatientResponse> getAllPatients() {
         log.debug(">> Calling method : getAllPatients()");
@@ -42,13 +37,6 @@ public class PatientService implements IPatientService {
                         .build()).toList();
     }
 
-    /**
-     * Retrieves an entity by its id.
-     *
-     * @param id must not be null.
-     * @return the entity with the given id.
-     * @throws IllegalArgumentException if entity with {@literal id} is not found.
-     */
     @Override
     public PatientResponse getPatientById(Integer id) {
         log.debug(">> Calling method : getPatientById({})", id);
@@ -75,13 +63,6 @@ public class PatientService implements IPatientService {
                 .build();
     }
 
-    /**
-     * Saves a given entity.
-     *
-     * @param patientRequest must not be {@literal null}.
-     * @return the saved entity; will never be {@literal null}.
-     * @throws IllegalArgumentException in case the given {@literal entity} is {@literal null}.
-     */
     @Override
     public PatientResponse createPatient(PatientRequest patientRequest) {
         log.debug(">> Calling method : createPatient({})", patientRequest);
@@ -110,13 +91,6 @@ public class PatientService implements IPatientService {
                 .build();
     }
 
-
-    /**
-     * Deletes the entity with the given id.
-     *
-     * @param id must not be {@literal null}.
-     * @throws IllegalArgumentException if entity with {@literal id} is not found.
-     */
     @Override
     public void deletePatientById(Integer id) {
         log.debug(">> Calling method : deletePatientById({})", id);
@@ -131,14 +105,6 @@ public class PatientService implements IPatientService {
         log.debug("<< Result         : object with id {} deleted", id);
     }
 
-    /**
-     * Updates a given entity.
-     *
-     * @param id must not be {@literal null}.
-     * @param patientRequest must not be {@literal null}.
-     * @return the saved entity.
-     * @throws IllegalArgumentException if entity with {@literal id} is not found.
-     */
     @Override
     public PatientResponse updatePatientById(Integer id, PatientRequest patientRequest) {
         log.debug(">> Calling method : updatePatientById({}, {})", id, patientRequest);
