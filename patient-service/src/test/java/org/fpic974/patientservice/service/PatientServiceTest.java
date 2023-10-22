@@ -68,6 +68,7 @@ class PatientServiceTest {
 
         PatientResponse patientResponse = patientService.getPatientById(100);
 
+        assertDoesNotThrow(() -> {});
         assertNotNull(patientResponse);
         assertEquals("Doe", patientResponse.getLastName());
         assertEquals("John", patientResponse.getFirstName());
@@ -76,7 +77,7 @@ class PatientServiceTest {
 
     @Test
     public void shouldNotGetPatientInvalidId() {
-        when(patientRepository.findById(anyInt())).thenThrow(new IllegalArgumentException("Invalid id"));
+        when(patientRepository.findById(anyInt())).thenReturn(Optional.empty());
 
         IllegalArgumentException illegalArgumentException = assertThrows(IllegalArgumentException.class,
                 () -> patientService.getPatientById(100));
@@ -86,6 +87,14 @@ class PatientServiceTest {
 
     @Test
     public void shouldCreatePatient() {
+        Patient patient = Patient.builder()
+                .id(100)
+                .lastName("Doe")
+                .firstName("John")
+                .birthDate(LocalDate.now())
+                .gender('M')
+                .build();
+
         PatientRequest patientRequest = PatientRequest.builder()
                 .lastName("Doe")
                 .firstName("John")
@@ -93,26 +102,20 @@ class PatientServiceTest {
                 .gender('M')
                 .build();
 
+        when(patientRepository.save(any(Patient.class))).thenReturn(patient);
+
         PatientResponse patientResponse = patientService.createPatient(patientRequest);
 
-        assertNotNull(patientResponse);
+        assertEquals(100, patientResponse.getId());
         assertEquals("Doe", patientResponse.getLastName());
         assertEquals("John", patientResponse.getFirstName());
         assertEquals('M', patientResponse.getGender());
     }
 
     @Test
-    public void shouldNotCreatePatientIllegalArgument() {
-        when(patientRepository.save(any(Patient.class))).thenThrow(new IllegalArgumentException("Invalid Patient"));
-
-        IllegalArgumentException illegalArgumentException = assertThrows(IllegalArgumentException.class,
-                () -> patientService.createPatient(new PatientRequest()));
-
-        assertTrue(illegalArgumentException.getMessage().contains("Invalid Patient"));
-    }
-
-    @Test
     public void shouldDeletePatientById() {
+        when(patientRepository.existsById(anyInt())).thenReturn(true);
+
         patientService.deletePatientById(100);
 
         assertDoesNotThrow(() -> {});
@@ -120,7 +123,12 @@ class PatientServiceTest {
 
     @Test
     public void shouldNotDeletePatientIllegalArgument() {
+        when(patientRepository.existsById(anyInt())).thenReturn(false);
 
+        IllegalArgumentException illegalArgumentException = assertThrows(IllegalArgumentException.class,
+                () -> patientService.deletePatientById(100));
+
+        assertTrue(illegalArgumentException.getMessage().contains("Invalid id"));
     }
 
     @Test
@@ -133,24 +141,34 @@ class PatientServiceTest {
                 .gender('M')
                 .build();
 
+
+        PatientRequest patientRequest = PatientRequest.builder()
+                .lastName("Doe")
+                .firstName("John")
+                .birthDate(LocalDate.now())
+                .gender('M')
+                .build();
+
+        when(patientRepository.existsById(anyInt())).thenReturn(true);
         when(patientRepository.save(any(Patient.class))).thenReturn(patient);
 
-        PatientResponse patientResponse = patientService.updatePatientById(100, new PatientRequest());
+        PatientResponse patientResponse = patientService.updatePatientById(100, patientRequest);
 
-        assertNotNull(patientResponse);
+        assertDoesNotThrow(() -> {});
         assertEquals(100, patientResponse.getId());
-        assertNull(patientResponse.getLastName());
-        assertNull(patientResponse.getFirstName());
-        assertNull(patientResponse.getGender());
+        assertEquals(patient.getFirstName(), patientResponse.getFirstName());
+        assertEquals(patient.getLastName(), patientResponse.getLastName());
+        assertEquals(patient.getBirthDate(), patientResponse.getBirthDate());
+        assertEquals(patient.getGender(), patientResponse.getGender());
     }
 
     @Test
     public void shouldNotUpdatePatientIllegalArgument() {
-        when(patientRepository.save(any(Patient.class))).thenThrow(new IllegalArgumentException("Invalid Patient"));
+        when(patientRepository.existsById(anyInt())).thenReturn(false);
 
         IllegalArgumentException illegalArgumentException = assertThrows(IllegalArgumentException.class,
-                () -> patientService.createPatient(new PatientRequest()));
+                () -> patientService.updatePatientById(100, new PatientRequest()));
 
-        assertTrue(illegalArgumentException.getMessage().contains("Invalid Patient"));
+        assertTrue(illegalArgumentException.getMessage().contains("Invalid id"));
     }
 }
