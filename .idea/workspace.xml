@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5917bb7-e171-4812-970d-cf82c6d93bc4" name="Changes" comment="patient-service : javadoc">
+    <list default="true" id="b5917bb7-e171-4812-970d-cf82c6d93bc4" name="Changes" comment="patient-service : javadoc updated">
+      <change afterPath="$PROJECT_DIR$/patient-service/src/main/java/org/fpic974/patientservice/exception/CustomException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/org/fpic974/patientservice/service/IPatientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/org/fpic974/patientservice/service/IPatientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/org/fpic974/patientservice/service/PatientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/org/fpic974/patientservice/service/PatientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/org/fpic974/patientservice/controller/PatientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/org/fpic974/patientservice/controller/PatientController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +19,8 @@
       <list>
         <option value="Interface" />
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -447,7 +447,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697957666111</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="patient-service : javadoc updated">
+      <created>1697964251834</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1697964251834</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -478,7 +485,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Initial Setup&#10;patient-service base implementation" />
     <MESSAGE value="patient-service :&#10;- added post/delete/put methods" />
     <MESSAGE value="gateway-service :&#10;- created route for patient-service" />
     <MESSAGE value="Created web-service with thymeleaf templates&#10;gateway-service :&#10;- created route for web-service" />
@@ -503,7 +509,8 @@
     <MESSAGE value="web-service : updated update form" />
     <MESSAGE value="web-service : update form" />
     <MESSAGE value="patient-service : javadoc" />
-    <option name="LAST_COMMIT_MESSAGE" value="patient-service : javadoc" />
+    <MESSAGE value="patient-service : javadoc updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="patient-service : javadoc updated" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
