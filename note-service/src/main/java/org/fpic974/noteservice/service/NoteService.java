@@ -28,7 +28,7 @@ public class NoteService implements INoteService {
 
         List<Note> notes = noteRepository.findByPatientId(id);
 
-        log.debug(">> Result         : {} object(s)", notes.size());
+        log.debug("<< Result         : {} object(s)", notes.size());
 
         return notes.stream()
                 .map(note -> NoteResponse.builder()

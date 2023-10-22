@@ -22,7 +22,7 @@ import java.util.regex.Pattern;
 @Service
 @RequiredArgsConstructor
 @Slf4j
-public class RiskService {
+public class RiskService implements IRiskService {
 
     private final CustomProperties customProperties;
 
@@ -41,9 +41,12 @@ public class RiskService {
             "Réaction",
             "Anticorps");
 
+    @Override
     public List<String> getTriggersByPatientId(Integer id, String token) {
+        log.debug(">> Calling method : getTriggersByPatientId({})", id);
         List<String> triggerList = new ArrayList<>();
 
+        // Get all notes for Patient with id
         List<NoteResponse> notes = webClientBuilder.build().get()
                 .uri(customProperties.getNoteApiUrl(), uriBuilder -> uriBuilder.queryParam("id", id).build())
                 .header(HttpHeaders.AUTHORIZATION, token)
@@ -51,6 +54,7 @@ public class RiskService {
                 .bodyToMono(new ParameterizedTypeReference<List<NoteResponse>>() { })
                 .block();
 
+        // Run through all notes add thresholds triggered
         if (notes != null) {
             notes.forEach(note -> {
                 triggerValues.forEach(trigger -> {
@@ -72,15 +76,17 @@ public class RiskService {
             });
         }
 
-        log.debug(id + ":" + triggerList.toString());
+        log.debug("<< Result         : {} object(s)", triggerList.size());
 
         return triggerList;
     }
 
+    @Override
     public boolean findTriggerInNote(String trigger, NoteResponse noteResponse) {
         return StringUtils.containsIgnoreCase(noteResponse.getNote(), trigger);
     }
 
+    @Override
     public String getRiskAssessmentByPatientId(Integer id, String token) {
         PatientResponse patient = webClientBuilder.build().get()
                 .uri(customProperties.getPatientApiUrl(), uriBuilder -> uriBuilder.queryParam("id", id).build())
@@ -88,6 +94,10 @@ public class RiskService {
                 .retrieve()
                 .bodyToMono(PatientResponse.class)
                 .block();
+
+        if (patient == null) {
+            return null;
+        }
 
         RiskAssessment riskAssessment = RiskAssessment.builder()
                 .age(LocalDate.now().compareTo(patient.getBirthDate()))
