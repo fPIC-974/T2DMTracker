@@ -9,56 +9,82 @@
     <title>Welcome to T2DM Tracker</title>
 </head>
 <body>
-<h1>Welcome to T2DM Tracker !</h1>
 <div class="container">
     <div class="row">
-        <div class="col-6">
-            <a href="/web/patient/list">Patient List</a>&nbsp;|&nbsp;
+        <div class="col"></div>
+        <div class="col-8">
+            <div class="row">
+                <nav class="navbar navbar-light bg-light mb-5">
+                    <a class="navbar-brand" href="/web/patient/list">T2DM Tracker</a>
+                    <form th:action="@{/logout}" method="POST" class="form-inline">
+                        <label class="form-label">Logged in as <b th:inline="text" class="user"
+                                                                  th:text="${user}"></b></label>
+                        <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Logout</button>
+                    </form>
+                </nav>
+
+                <table class="table table-sm table-striped text-sm-start align-middle">
+                    <thead class="table-secondary text-sm">
+                    <tr>
+                        <th>Details</th>
+                        <th>Last Name</th>
+                        <th>First Name</th>
+                        <th>Birth Date</th>
+                        <th>Gender</th>
+                        <th>Address</th>
+                        <th>Phone Number</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:if="${patients.isEmpty()}">
+                        <td colspan="3">No patients in database</td>
+                    </tr>
+                    <tr th:each="patient: ${patients}">
+                        <!--                <td><a th:href="@{/web/patient/details(id=${patient.id})}"><span th:text="${patient.id}"></span></a>-->
+                        <td><a th:href="@{/web/patient/details(id=${patient.id})}">
+                            <button class="btn btn-primary btn-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                     class="bi bi-eye" viewBox="0 0 16 16">
+                                    <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                                    <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                                </svg>
+                            </button>
+                        </a>
+                        </td>
+                        <td><span th:text="${patient.lastName}">Last Name</span></td>
+                        <td><span th:text="${patient.firstName}">First Name</span></td>
+                        <td><span th:text="${patient.birthDate}">Birth Date</span></td>
+                        <td><span th:text="${patient.gender}">Gender</span></td>
+                        <td><span th:text="${patient.address}">Address</span></td>
+                        <td><span th:text="${patient.phone}">Phone Number</span></td>
+                        <td>
+                            <a th:href="@{/web/patient/update(id=${patient.id})}">
+                                <button class="btn btn-warning btn-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                         class="bi bi-pencil" viewBox="0 0 16 16">
+                                        <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                                    </svg>
+                                </button>
+                            </a>
+                            <a th:href="@{/web/patient/delete(id=${patient.id})}">
+                                <button class="btn btn-danger btn-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                         class="bi bi-trash" viewBox="0 0 16 16">
+                                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z"/>
+                                        <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z"/>
+                                    </svg>
+                                </button>
+                            </a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <a href="/web/patient/add" class="btn btn-primary btn-sm">Add Patient</a>
+            </div>
         </div>
-        <div class="col-6 text-right">
-            Logged in user: <b th:inline="text" class="user" th:text="${user}"> </b>
-            <form th:action="@{/logout}" method="POST">
-                <input type="submit" value="Logout"/>
-            </form>
-        </div>
-    </div>
-    <div class="row"><h2>Patient List</h2></div>
-    <div class="row">
-        <div class="text-right"><a href="/web/patient/add" class="btn btn-primary btn-sm">Add Patient</a></div>
-        <div><p></p></div>
-        <table class="table table-bordered">
-            <thead>
-            <tr>
-                <th>ID</th>
-                <th>Last Name</th>
-                <th>First Name</th>
-                <th>Birth Date</th>
-                <th>Gender</th>
-                <th>Address</th>
-                <th>Phone Number</th>
-                <th>Action</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr th:if="${patients.isEmpty()}">
-                <td colspan="3">No patients in database</td>
-            </tr>
-            <tr th:each="patient: ${patients}">
-                <td><a th:href="@{/web/patient/details(id=${patient.id})}"><span th:text="${patient.id}"></span></a>
-                </td>
-                <td><span th:text="${patient.lastName}">Last Name</span></td>
-                <td><span th:text="${patient.firstName}">First Name</span></td>
-                <td><span th:text="${patient.birthDate}">Birth Date</span></td>
-                <td><span th:text="${patient.gender}">Gender</span></td>
-                <td><span th:text="${patient.address}">Address</span></td>
-                <td><span th:text="${patient.phone}">Phone Number</span></td>
-                <td>
-                    <a th:href="@{/web/patient/update(id=${patient.id})}">Edit</a>&nbsp;|&nbsp;
-                    <a th:href="@{/web/patient/delete(id=${patient.id})}">Delete</a>
-                </td>
-            </tr>
-            </tbody>
-        </table>
+        <div class="col"></div>
     </div>
 </div>
 </body>

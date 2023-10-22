@@ -52,10 +52,10 @@ class NoteServiceTest {
     public void shouldNotGetNotesByInvalidPatientId() {
         when(noteRepository.existsByPatientId(anyString())).thenReturn(false);
 
-        IllegalArgumentException illegalArgumentException = assertThrows(IllegalArgumentException.class,
-                () -> noteService.getNotesByPatientId("44"));
+        List<NoteResponse> notes = noteService.getNotesByPatientId("44");
 
-        assertTrue(illegalArgumentException.getMessage().contains("Invalid id"));
+        assertEquals(0, notes.size());
+        assertDoesNotThrow(() -> {});
     }
 
     @Test
@@ -87,9 +87,8 @@ class NoteServiceTest {
     public void shouldNotDeleteNotesByInvalidPatientId() {
         when(noteRepository.existsByPatientId(anyString())).thenReturn(false);
 
-        IllegalArgumentException illegalArgumentException = assertThrows(IllegalArgumentException.class,
-                () -> noteService.deleteNotesByPatientId("44"));
+        noteService.deleteNotesByPatientId("44");
 
-        assertTrue(illegalArgumentException.getMessage().contains("Invalid id"));
+        assertDoesNotThrow(() -> {});
     }
 }

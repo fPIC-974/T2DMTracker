@@ -23,7 +23,6 @@ public class NoteService implements INoteService {
 
         if (!noteRepository.existsByPatientId(id)) {
             log.debug("<< No object found with id {}", id);
-            throw new IllegalArgumentException("Invalid id");
         }
 
         List<Note> notes = noteRepository.findByPatientId(id);
@@ -62,7 +61,6 @@ public class NoteService implements INoteService {
 
         if (!noteRepository.existsByPatientId(id)) {
             log.debug("<< No object found with id {}", id);
-            throw new IllegalArgumentException("Invalid id");
         }
 
         noteRepository.deleteByPatientId(id);

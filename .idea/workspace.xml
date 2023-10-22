@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5917bb7-e171-4812-970d-cf82c6d93bc4" name="Changes" comment="note-service : tests fully updated">
-      <change afterPath="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/exception/ApiExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/exception/CustomException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/service/IRiskService.java" afterDir="false" />
+    <list default="true" id="b5917bb7-e171-4812-970d-cf82c6d93bc4" name="Changes" comment="risk-service : updated service/controller">
+      <change afterPath="$PROJECT_DIR$/web-service/src/main/resources/static/media/t2dm.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/note-service/src/main/java/org/fpic974/noteservice/service/NoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/note-service/src/main/java/org/fpic974/noteservice/service/NoteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/risk-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/risk-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/controller/RiskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/controller/RiskController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/service/RiskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/risk-service/src/main/java/org/fpic974/riskservice/service/RiskService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note-service/src/test/java/org/fpic974/noteservice/controller/NoteControllerIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/note-service/src/test/java/org/fpic974/noteservice/controller/NoteControllerIT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note-service/src/test/java/org/fpic974/noteservice/service/NoteServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/note-service/src/test/java/org/fpic974/noteservice/service/NoteServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/patient/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/patient/add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/patient/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/patient/list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +96,8 @@
       <recent name="$PROJECT_DIR$/gateway-service/src/main" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web-service/src/main/resources/static/media" />
+      <recent name="$PROJECT_DIR$/web-service/src/main/resources/templates/patient" />
       <recent name="$PROJECT_DIR$/web-service/src/main/resources/templates" />
       <recent name="$PROJECT_DIR$/web-service/src/main/resources/templates/web" />
       <recent name="$PROJECT_DIR$/docker/mysql-t2dm" />
@@ -135,16 +136,8 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.RiskServiceTest">
-    <configuration name="All in note-service" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="note-service" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NoteControllerIT.shouldGetNotesByPatientId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.NoteControllerIT.shouldNotGetNotesByInvalidPatientId">
+    <configuration name="NoteControllerIT.shouldDeleteNotesByPatientId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="note-service" />
       <extension name="coverage">
         <pattern>
@@ -154,7 +147,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.fpic974.noteservice.controller" />
       <option name="MAIN_CLASS_NAME" value="org.fpic974.noteservice.controller.NoteControllerIT" />
-      <option name="METHOD_NAME" value="shouldGetNotesByPatientId" />
+      <option name="METHOD_NAME" value="shouldDeleteNotesByPatientId" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -176,6 +169,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="NoteServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="note-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.fpic974.noteservice.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.fpic974.noteservice.service" />
+      <option name="MAIN_CLASS_NAME" value="org.fpic974.noteservice.service.NoteServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RiskServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="risk-service" />
       <extension name="coverage">
@@ -191,18 +199,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RiskServiceTest.shouldGetRiskAssessment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="risk-service" />
+    <configuration name="org.fpic974.noteservice.service in note-service" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="note-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.fpic974.riskservice.service.*" />
+          <option name="PATTERN" value="org.fpic974.noteservice.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.fpic974.riskservice.service" />
-      <option name="MAIN_CLASS_NAME" value="org.fpic974.riskservice.service.RiskServiceTest" />
-      <option name="METHOD_NAME" value="shouldGetRiskAssessment" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="org.fpic974.noteservice.service" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -244,10 +250,10 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.NoteControllerIT.shouldNotGetNotesByInvalidPatientId" />
+      <item itemvalue="JUnit.NoteServiceTest" />
       <item itemvalue="JUnit.RiskServiceTest" />
-      <item itemvalue="JUnit.RiskServiceTest.shouldGetRiskAssessment" />
-      <item itemvalue="JUnit.All in note-service" />
-      <item itemvalue="JUnit.NoteControllerIT.shouldGetNotesByPatientId" />
+      <item itemvalue="JUnit.org.fpic974.noteservice.service in note-service" />
+      <item itemvalue="JUnit.NoteControllerIT.shouldDeleteNotesByPatientId" />
       <item itemvalue="Spring Boot.GatewayServiceApplication" />
       <item itemvalue="Spring Boot.NoteServiceApplication" />
       <item itemvalue="Spring Boot.RiskServiceApplication" />
@@ -256,11 +262,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RiskServiceTest" />
-        <item itemvalue="JUnit.RiskServiceTest.shouldGetRiskAssessment" />
-        <item itemvalue="JUnit.All in note-service" />
         <item itemvalue="JUnit.NoteControllerIT.shouldNotGetNotesByInvalidPatientId" />
-        <item itemvalue="JUnit.NoteControllerIT.shouldGetNotesByPatientId" />
+        <item itemvalue="JUnit.NoteControllerIT.shouldDeleteNotesByPatientId" />
+        <item itemvalue="JUnit.NoteServiceTest" />
+        <item itemvalue="JUnit.org.fpic974.noteservice.service in note-service" />
+        <item itemvalue="JUnit.RiskServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -491,7 +497,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697987064769</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="risk-service : updated service/controller">
+      <created>1697991468848</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1697991468848</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -522,7 +535,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="- Created note-service with base components (GET/POST)" />
     <MESSAGE value="- added url information in web-service&#10;- added route setup in gateway-service" />
     <MESSAGE value="- added notes deletion when patient deleted" />
     <MESSAGE value="- Dockerfile for each module&#10;- docker-compose.yaml&#10;- created application-docker.properties for each module to properly run in container mode&#10;- Updated README.md" />
@@ -547,7 +559,8 @@
     <MESSAGE value="patient-service : updated unit tests" />
     <MESSAGE value="patient-service : tests fully updated" />
     <MESSAGE value="note-service : tests fully updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="note-service : tests fully updated" />
+    <MESSAGE value="risk-service : updated service/controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="risk-service : updated service/controller" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
