@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5917bb7-e171-4812-970d-cf82c6d93bc4" name="Changes" comment="gateway-service : hot fix on AuthFilter.java (wouldn't authenticate on Chrome)" />
+    <list default="true" id="b5917bb7-e171-4812-970d-cf82c6d93bc4" name="Changes" comment="updated .xml file">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,7 +28,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="jwtauth" />
+        <entry key="$PROJECT_DIR$" value="polishing" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -482,7 +484,7 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/T2DMTracker$All_in_patient_service.ic" NAME="All in patient-service Coverage Results" MODIFIED="1697412440157" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/T2DMTracker$All_in_patient_service.ic" NAME="All in patient-service Coverage Results" MODIFIED="1697973347671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/T2DMTracker$NoteServiceTest.ic" NAME="NoteServiceTest Coverage Results" MODIFIED="1697415101594" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.fpic974.noteservice.service.*</FILTER>
     </SUITE>
@@ -495,6 +497,9 @@
     <SUITE FILE_PATH="coverage/T2DMTracker$PatientServiceTest.ic" NAME="PatientServiceTest Coverage Results" MODIFIED="1697408023029" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.fpic974.patientservice.service.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/T2DMTracker$All_in_note_service.ic" NAME="All in note-service Coverage Results" MODIFIED="1697416611096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/T2DMTracker$org_fpic974_noteservice_service_in_note_service.ic" NAME="org.fpic974.noteservice.service in note-service Coverage Results" MODIFIED="1697976499293" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.fpic974.noteservice.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/T2DMTracker$All_in_note_service.ic" NAME="All in note-service Coverage Results" MODIFIED="1697986774280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
