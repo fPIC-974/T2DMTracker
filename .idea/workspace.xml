@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5917bb7-e171-4812-970d-cf82c6d93bc4" name="Changes" comment="gateway-service : added custom error HTML page">
+    <list default="true" id="b5917bb7-e171-4812-970d-cf82c6d93bc4" name="Changes" comment="web-service : updated risk visual">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/patient/details.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/patient/details.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -289,6 +288,7 @@
       <workItem from="1697714418422" duration="15506000" />
       <workItem from="1697737161751" duration="4823000" />
       <workItem from="1697754240196" duration="10365000" />
+      <workItem from="1698054165055" duration="466000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Setup&#10;patient-service base implementation">
       <created>1697300989287</created>
@@ -521,7 +521,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698031713506</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="web-service : updated risk visual">
+      <created>1698034156362</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1698034156362</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -552,7 +559,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="patient-service:&#10;- Service Interface&#10;- Added validation to DTO" />
     <MESSAGE value="patient-service:&#10;- tests finalization" />
     <MESSAGE value="note-service:&#10;- tests finalization" />
     <MESSAGE value="web-service:&#10;- resolving error when trying to update multiple times with fields not validated" />
@@ -577,7 +583,8 @@
     <MESSAGE value="web-service : updated list / add forms" />
     <MESSAGE value="web-service : updated details form" />
     <MESSAGE value="gateway-service : added custom error HTML page" />
-    <option name="LAST_COMMIT_MESSAGE" value="gateway-service : added custom error HTML page" />
+    <MESSAGE value="web-service : updated risk visual" />
+    <option name="LAST_COMMIT_MESSAGE" value="web-service : updated risk visual" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
