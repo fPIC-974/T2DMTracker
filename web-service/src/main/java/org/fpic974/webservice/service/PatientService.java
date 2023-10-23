@@ -23,9 +23,7 @@ public class PatientService {
 
     private final CustomProperties customProperties;
     private final WebClient.Builder webClientBuilder;
-
     private final UserDetailsService userDetailsService;
-
     private final UserService userService;
 
     public List<PatientResponse> getAllPatients() {
