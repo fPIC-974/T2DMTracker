@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5917bb7-e171-4812-970d-cf82c6d93bc4" name="Changes" comment="web-service : updated details form">
-      <change afterPath="$PROJECT_DIR$/gateway-service/src/main/java/org/fpic974/gatewayservice/exception/ApiExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-service/src/main/java/org/fpic974/gatewayservice/exception/CustomException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/controller/WebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/controller/WebController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/patient/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/patient/add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/patient/details.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/patient/details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/patient/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/patient/update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,11 +106,11 @@
       <recent name="org.fpic974.patientservice.service" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.fpic974.webservice.service" />
       <recent name="org.fpic974.riskservice.controller" />
       <recent name="org.fpic974.riskservice.service" />
       <recent name="org.fpic974.noteservice.controller" />
       <recent name="org.fpic974.noteservice.service" />
-      <recent name="org.fpic974.patientservice.controller" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.fpic974.gatewayservice.dto" />
@@ -136,7 +131,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.NoteControllerIT.shouldNotGetNotesByInvalidPatientId">
+  <component name="RunManager" selected="JUnit.PatientServiceTest.testWebClient">
     <configuration name="NoteControllerIT.shouldDeleteNotesByPatientId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="note-service" />
       <extension name="coverage">
@@ -184,17 +179,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RiskServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="risk-service" />
+    <configuration name="PatientServiceTest.testWebClient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="web-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.fpic974.riskservice.service.*" />
+          <option name="PATTERN" value="org.fpic974.webservice.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.fpic974.riskservice.service" />
-      <option name="MAIN_CLASS_NAME" value="org.fpic974.riskservice.service.RiskServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="org.fpic974.webservice.service" />
+      <option name="MAIN_CLASS_NAME" value="org.fpic974.webservice.service.PatientServiceTest" />
+      <option name="METHOD_NAME" value="testWebClient" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -251,7 +247,7 @@
     <list>
       <item itemvalue="JUnit.NoteControllerIT.shouldNotGetNotesByInvalidPatientId" />
       <item itemvalue="JUnit.NoteServiceTest" />
-      <item itemvalue="JUnit.RiskServiceTest" />
+      <item itemvalue="JUnit.PatientServiceTest.testWebClient" />
       <item itemvalue="JUnit.org.fpic974.noteservice.service in note-service" />
       <item itemvalue="JUnit.NoteControllerIT.shouldDeleteNotesByPatientId" />
       <item itemvalue="Spring Boot.GatewayServiceApplication" />
@@ -262,11 +258,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PatientServiceTest.testWebClient" />
         <item itemvalue="JUnit.NoteControllerIT.shouldNotGetNotesByInvalidPatientId" />
         <item itemvalue="JUnit.NoteControllerIT.shouldDeleteNotesByPatientId" />
         <item itemvalue="JUnit.NoteServiceTest" />
         <item itemvalue="JUnit.org.fpic974.noteservice.service in note-service" />
-        <item itemvalue="JUnit.RiskServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -511,7 +507,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698005912739</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="web-service : updated details form">
+      <created>1698023710058</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1698023710058</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

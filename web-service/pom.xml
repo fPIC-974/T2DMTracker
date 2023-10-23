@@ -78,6 +78,17 @@
             <artifactId>netty-resolver-dns-native-macos</artifactId>
             <classifier>osx-aarch_64</classifier>
             <version>4.1.100.Final</version>
+        </dependency><dependency>
+        <groupId>com.squareup.okhttp3</groupId>
+        <artifactId>okhttp</artifactId>
+        <version>4.0.1</version>
+        <scope>test</scope>
+    </dependency>
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>mockwebserver</artifactId>
+            <version>4.0.1</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 </project>
