@@ -25,12 +25,21 @@
             <div class="row">
                 <div class="col"></div>
                 <div class="col-4 border rounded">
+                    <div class="row mb-3" th:switch="${risk}">
+                        <div class="col border">
+                            <bold><span class="text-secondary">Risk</span></bold>
+                        </div>
+                        <div class="bg-success-subtle col" th:case="None" th:text="${risk}">Risk</div>
+                        <div class="bg-info-subtle col" th:case="BorderLine" th:text="${risk}">Risk</div>
+                        <div class="bg-warning-subtle col" th:case="EarlyOnSet" th:text="${risk}">Risk</div>
+                        <div class="bg-danger-subtle col" th:case="Danger" th:text="${risk}">Risk</div>
+                    </div>
                     <div class="row">
                         <div class="col">
-                        <span th:text="${patient.firstName}">Last Name</span>
+                            <span th:text="${patient.firstName}">Last Name</span>
                         </div>
                         <div class="col">
-                        <span th:text="${patient.lastName}">Last Name</span>
+                            <span th:text="${patient.lastName}">Last Name</span>
                         </div>
                     </div>
                     <div class="row">
@@ -78,89 +87,89 @@
             </div>
         </div>
         <div class="col"></div>
-<!--
-
-        <div class="row">
-            <h2>Patient Details</h2>
-            <h3 th:switch="${risk}">
-                <span class="bg-success-subtle" th:case="None" th:text="${risk}">Risk</span>
-                <span class="bg-info-subtle" th:case="BorderLine" th:text="${risk}">Risk</span>
-                <span class="bg-warning-subtle" th:case="EarlyOnSet" th:text="${risk}">Risk</span>
-                <span class="bg-danger-subtle" th:case="Danger" th:text="${risk}">Risk</span>
-            </h3>
-        </div>
-
-        <div class="row">
-            <div class="col-4">
-                <div class="row">
-                    <label class="col-sm-2 control-label">ID</label>
-                    <div class="col-sm-10">
-                        <span th:text="${patient.id}">ID</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <label class="col-sm-2 control-label">Last Name</label>
-                    <div class="col-sm-10">
-                        <span th:text="${patient.lastName}">Last Name</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <label class="col-sm-2 control-label">First Name</label>
-                    <div class="col-sm-10">
-                        <span th:text="${patient.firstName}">First Name</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <label class="col-sm-2 control-label">Birth Date</label>
-                    <div class="col-sm-10">
-                        <span th:text="${patient.birthDate}">Birth Date</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <label class="col-sm-2 control-label">Gender</label>
-                    <div class="col-sm-10">
-                        <span th:text="${patient.gender}">Gender</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <label class="col-sm-2 control-label">Address</label>
-                    <div class="col-sm-10">
-                        <span th:text="${patient.address}">Address</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <label class="col-sm-2 control-label">Phone</label>
-                    <div class="col-sm-10">
-                        <span th:text="${patient.phone}">Phone</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <table class="table table-sm">
-                    <tr th:each="note: ${notes}">
-                        <td><span style="white-space: pre-line" th:text="${note.note}">Note</span></td>
-                    </tr>
-                </table>
+        <!--
 
                 <div class="row">
-                    <form action="#" th:action="@{/web/patient/validateNote}" th:object="${note}" id="noteForm"
-                          method="post"
-                          class="form-horizontal" style="width: 100%">
-                        <div class="form-group">
-                            &lt;!&ndash;                        <label for="patientId" class="col-sm-2 control-label">Patient Id</label>&ndash;&gt;
-                            <input type="hidden" name="patientId" id="patientId" th:value="${patient.id}">
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-12">
-                                <input class="btn btn-primary btn-sm" type="submit" value="Add Note">
+                    <h2>Patient Details</h2>
+                    <h3 th:switch="${risk}">
+                        <span class="bg-success-subtle" th:case="None" th:text="${risk}">Risk</span>
+                        <span class="bg-info-subtle" th:case="BorderLine" th:text="${risk}">Risk</span>
+                        <span class="bg-warning-subtle" th:case="EarlyOnSet" th:text="${risk}">Risk</span>
+                        <span class="bg-danger-subtle" th:case="Danger" th:text="${risk}">Risk</span>
+                    </h3>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <div class="row">
+                            <label class="col-sm-2 control-label">ID</label>
+                            <div class="col-sm-10">
+                                <span th:text="${patient.id}">ID</span>
                             </div>
                         </div>
-                        <textarea class="form-control" rows="3" th:field="*{note}" id="note" name="note"
-                                  form="noteForm"></textarea>
-                    </form>
-                </div>
-            </div>
-        </div>-->
+                        <div class="row">
+                            <label class="col-sm-2 control-label">Last Name</label>
+                            <div class="col-sm-10">
+                                <span th:text="${patient.lastName}">Last Name</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="col-sm-2 control-label">First Name</label>
+                            <div class="col-sm-10">
+                                <span th:text="${patient.firstName}">First Name</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="col-sm-2 control-label">Birth Date</label>
+                            <div class="col-sm-10">
+                                <span th:text="${patient.birthDate}">Birth Date</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="col-sm-2 control-label">Gender</label>
+                            <div class="col-sm-10">
+                                <span th:text="${patient.gender}">Gender</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="col-sm-2 control-label">Address</label>
+                            <div class="col-sm-10">
+                                <span th:text="${patient.address}">Address</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="col-sm-2 control-label">Phone</label>
+                            <div class="col-sm-10">
+                                <span th:text="${patient.phone}">Phone</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <table class="table table-sm">
+                            <tr th:each="note: ${notes}">
+                                <td><span style="white-space: pre-line" th:text="${note.note}">Note</span></td>
+                            </tr>
+                        </table>
+
+                        <div class="row">
+                            <form action="#" th:action="@{/web/patient/validateNote}" th:object="${note}" id="noteForm"
+                                  method="post"
+                                  class="form-horizontal" style="width: 100%">
+                                <div class="form-group">
+                                    &lt;!&ndash;                        <label for="patientId" class="col-sm-2 control-label">Patient Id</label>&ndash;&gt;
+                                    <input type="hidden" name="patientId" id="patientId" th:value="${patient.id}">
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <input class="btn btn-primary btn-sm" type="submit" value="Add Note">
+                                    </div>
+                                </div>
+                                <textarea class="form-control" rows="3" th:field="*{note}" id="note" name="note"
+                                          form="noteForm"></textarea>
+                            </form>
+                        </div>
+                    </div>
+                </div>-->
     </div>
 </div>
 </body>

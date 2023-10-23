@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5917bb7-e171-4812-970d-cf82c6d93bc4" name="Changes" comment="web-service : updated details form">
-      <change afterPath="$PROJECT_DIR$/gateway-service/src/main/java/org/fpic974/gatewayservice/exception/GlobalErrorWebExceptionHandler.java" afterDir="false" />
+    <list default="true" id="b5917bb7-e171-4812-970d-cf82c6d93bc4" name="Changes" comment="gateway-service : added custom error HTML page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/org/fpic974/gatewayservice/config/AuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/org/fpic974/gatewayservice/config/AuthFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/org/fpic974/gatewayservice/exception/ApiExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/org/fpic974/gatewayservice/exception/GlobalErrorAttributes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/org/fpic974/gatewayservice/exception/CustomException.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/org/fpic974/gatewayservice/exception/CustomException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/service/PatientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/service/PatientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/org/fpic974/webservice/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/patient/details.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/patient/details.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -519,7 +514,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698023710058</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="gateway-service : added custom error HTML page">
+      <created>1698031713506</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1698031713506</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -550,7 +552,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="- Dockerfile for each module&#10;- docker-compose.yaml&#10;- created application-docker.properties for each module to properly run in container mode&#10;- Updated README.md" />
     <MESSAGE value="patient-service:&#10;- Service Interface&#10;- Added validation to DTO" />
     <MESSAGE value="patient-service:&#10;- tests finalization" />
     <MESSAGE value="note-service:&#10;- tests finalization" />
@@ -575,7 +576,8 @@
     <MESSAGE value="risk-service : updated service/controller" />
     <MESSAGE value="web-service : updated list / add forms" />
     <MESSAGE value="web-service : updated details form" />
-    <option name="LAST_COMMIT_MESSAGE" value="web-service : updated details form" />
+    <MESSAGE value="gateway-service : added custom error HTML page" />
+    <option name="LAST_COMMIT_MESSAGE" value="gateway-service : added custom error HTML page" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
