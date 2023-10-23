@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 
@@ -36,32 +37,57 @@ class NoteServiceTest {
         List<Note> noteList = new ArrayList<>();
         noteList.add(note);
 
+        when(noteRepository.existsByPatientId(anyString())).thenReturn(true);
         when(noteRepository.findByPatientId(anyString())).thenReturn(noteList);
 
         List<NoteResponse> notes = noteService.getNotesByPatientId("5");
 
+        assertDoesNotThrow(() -> {});
         assertNotNull(notes);
         assertEquals("5", notes.get(0).getPatientId());
         assertEquals("Test\r\nde\r\nnote", notes.get(0).getNote());
     }
 
     @Test
+    public void shouldNotGetNotesByInvalidPatientId() {
+        when(noteRepository.existsByPatientId(anyString())).thenReturn(false);
+
+        List<NoteResponse> notes = noteService.getNotesByPatientId("44");
+
+        assertEquals(0, notes.size());
+        assertDoesNotThrow(() -> {});
+    }
+
+    @Test
     public void shouldCreateNote() {
         NoteRequest noteRequest = NoteRequest.builder()
-                .patientId("5")
+                .patientId("4")
                 .note("Test\r\nde\r\nnote")
                 .build();
 
-        NoteResponse noteResponse = noteService.createNote(noteRequest);
+        when(noteRepository.save(any(Note.class))).thenReturn(new Note());
 
-        assertNotNull(noteResponse);
-        assertEquals("5", noteResponse.getPatientId());
-        assertEquals("Test\r\nde\r\nnote", noteResponse.getNote());
+        NoteResponse noteSaved = noteService.createNote(noteRequest);
+
+        assertNotNull(noteSaved);
+        assertEquals("4", noteSaved.getPatientId());
+        assertEquals("Test\r\nde\r\nnote", noteSaved.getNote());
     }
 
     @Test
     public void shouldDeleteNotesByPatientId() {
-        noteService.deleteNotesByPatientId("5");
+        when(noteRepository.existsByPatientId(anyString())).thenReturn(true);
+
+        noteService.deleteNotesByPatientId("44");
+
+        assertDoesNotThrow(() -> {});
+    }
+
+    @Test
+    public void shouldNotDeleteNotesByInvalidPatientId() {
+        when(noteRepository.existsByPatientId(anyString())).thenReturn(false);
+
+        noteService.deleteNotesByPatientId("44");
 
         assertDoesNotThrow(() -> {});
     }

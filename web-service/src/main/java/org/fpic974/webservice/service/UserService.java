@@ -43,10 +43,6 @@ public class UserService {
         if (passwordEncoder.matches(credentialsDto.getPassword(), user.getPassword())) {
             log.info("Passwords match ...");
 
-            /*return UserDto.builder()
-                    .username(user.getUsername())
-                    .token(createToken(user))
-                    .build();*/
             userDto = UserDto.builder()
                     .username(user.getUsername())
                     .token(createToken(user))
