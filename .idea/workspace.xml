@@ -130,7 +130,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PatientServiceTest.testWebClient">
+  <component name="RunManager">
     <configuration name="NoteControllerIT.shouldDeleteNotesByPatientId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="note-service" />
       <extension name="coverage">

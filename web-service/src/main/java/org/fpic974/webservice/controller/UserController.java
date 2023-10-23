@@ -25,19 +25,7 @@ public class UserController {
 
     private final UserService userService;
 
-    /*@PostMapping("/signIn")
-//    public ResponseEntity<UserDto> signIn(@RequestBody CredentialsDto credentialsDto) {
-    public ResponseEntity<UserDto> signIn(@RequestParam String username, @RequestParam String password) {
-        log.info("Trying to login {}", username);
-        CredentialsDto credentialsDto = CredentialsDto.builder()
-                .username(username)
-                .password(password)
-                .build();
-        return ResponseEntity.ok(userService.signIn(credentialsDto));
-    }*/
-
     @PostMapping("/signIn")
-//    public ResponseEntity<UserDto> signIn(@RequestBody CredentialsDto credentialsDto) {
     public String signIn(@RequestParam String username, @RequestParam String password, HttpServletResponse response) {
         log.info("Trying to login {}", username);
         CredentialsDto credentialsDto = CredentialsDto.builder()
