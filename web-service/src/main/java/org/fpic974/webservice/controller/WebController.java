@@ -66,8 +66,10 @@ public class WebController {
 
 
     @GetMapping("/add")
-    public String createPatient(PatientRequest patientRequest) {
+    public String createPatient(PatientRequest patientRequest, Model model) {
         log.debug("Controller Call : GET -- /web/patient/patient/add : " + patientRequest);
+
+        model.addAttribute("patientRequest", patientRequest);
 
         return "patient/add";
     }

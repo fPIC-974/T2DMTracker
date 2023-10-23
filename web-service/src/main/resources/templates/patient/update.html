@@ -13,9 +13,20 @@
 <div class="container">
   <div class="row">
     <div class="col"></div>
-    <div class="col-6">
-      <label class="h1">Update Patient</label>
-      <div class="row border rounded">
+    <div class="col-8">
+      <nav class="navbar navbar-light bg-light mb-5">
+        <a class="navbar-brand" href="/web/patient/list">T2DM Tracker</a>
+        <form th:action="@{/logout}" method="POST" class="form-inline">
+          <label class="form-label">Logged in as <b th:inline="text" class="user"
+                                                    th:text="${user}"></b></label>
+          <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Logout</button>
+        </form>
+      </nav>
+
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-6 border rounded">
+          <label class="col-form-label">Update Patient</label>
         <form action="#" th:action="@{/web/patient/update(id=${id})}" th:object="${patientRequest}" method="post" class="form-control-sm">
           <div class="row mb-3">
             <div class="col input-group-sm">
@@ -149,6 +160,8 @@
             </div>
           </div>
         </form>
+        </div>
+        <div class="col"></div>
       </div>
     </div>
     <div class="col"></div>
